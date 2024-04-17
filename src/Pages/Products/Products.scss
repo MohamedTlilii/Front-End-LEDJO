@@ -1,0 +1,214 @@
+@import "../../app.scss";
+.page-wrapper {
+  // border: 2px solid red;
+  height: 180vh;
+
+  @include desktop {
+    // border: 5px solid rgb(18, 162, 71);
+  }
+  @include tablet {
+    // border: 5px solid rgb(18, 162, 71);
+  }
+  @include mobile {
+    // border: 2px solid red;
+  }
+  @include mobileS {
+    // border: 2px solid red;
+    height: 230vh;
+  }
+}
+
+.products {
+  // border: 2px solid rgb(19, 187, 69);
+  text-align: center;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+
+  .products-content {
+    display: flex;
+    // gap: 70px;
+    // border: 2px solid rgb(0, 255, 234);
+    height: 150vh;
+
+    .left-side {
+      // border: 2px solid rgb(175, 17, 167);
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin: 20px;
+
+      h1 {
+        // border: 2px solid rgb(17, 175, 25);
+        animation: neonize 1s ease-in-out infinite alternate;
+      }
+      .left-side-container {
+        // border: 2px solid rgb(27, 209, 57);
+        width: 310px;
+        background-color: white;
+        color: black !important;
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ccc;
+            position: relative;
+
+            &:hover {
+              background-color: #f0f0f0;
+            }
+
+            &.dropdown {
+              .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #fff;
+                min-width: 120px;
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                top: 0;
+                left: 100%;
+                margin-left: 10px;
+                border: none !important;
+
+                width: 150px;
+                &:hover .dropdown-content {
+                  display: block;
+                }
+                li {
+                  padding: 10px;
+                  cursor: pointer;
+
+                  &:hover {
+                    background-color: #ddd;
+                  }
+                }
+              }
+
+              &:hover .dropdown-content {
+                display: block;
+              }
+            }
+          }
+        }
+
+        .product-mark {
+          color: black;
+        }
+      }
+    }
+
+    .right-side {
+      // border: 2px solid rgb(175, 17, 167);
+      flex: 15;
+      // display: flex;
+      // flex-direction: column;
+      // gap: 40px;
+      margin: 0px;
+      height: 126vh;
+
+      .right-side-container {
+        // border: 2px solid red;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 100px;
+        margin-top: 40px;
+        padding: 60px;
+        max-height: 1200px;
+        overflow-y: auto;
+        height: 120vh;
+      }
+      .right-side-container-product {
+        .item {
+          img {
+            // border: 2px solid rgb(9, 179, 179);
+          }
+          h1 {
+            // border: 2px solid #0fc027;
+          }
+          p {
+            // border: 2px solid #0fc027;
+          }
+          .item-prices {
+            // border: 2px solid #0fc027;
+
+            .item-price-new {
+              // border: 2px solid #0fc027;
+            }
+            .item-price-old {
+              // border: 2px solid #0fc027;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include desktop {
+    // border: 2px solid red;
+  }
+  @include tablet {
+    // border: 2px solid red;
+  }
+  @include mobile {
+    // border: 2px solid red;
+    height: 180vh;
+    // text-align: center;
+    .products-content {
+      // border: 2px solid red;
+      display: flex;
+      flex-direction: column;
+      // align-items: start;
+      // gap: -20px;
+      height: 180vh;
+
+      .left-side {
+        // border: 2px solid rgb(175, 17, 167);
+        align-items: center;
+        h1 {
+          font-size: 18px;
+        }
+        .left-side-container {
+          // border: 2px solid rgb(27, 209, 57);
+          width: 270px !important;
+          
+        }
+      }
+    }
+  }
+  @include mobileS {
+    // border: 2px solid red;
+    height: 180vh;
+    // text-align: center;
+    .products-content {
+      // border: 2px solid red;
+      display: flex;
+      flex-direction: column;
+      // align-items: start;
+      // gap: -20px;
+      height: 180vh;
+
+      .left-side {
+        // border: 2px solid rgb(175, 17, 167);
+        align-items: center;
+        h1 {
+          font-size: 18px;
+        }
+        .left-side-container {
+          // border: 2px solid rgb(27, 209, 57);
+          width: 270px !important;
+         
+        }
+      }
+    }
+  }
+}

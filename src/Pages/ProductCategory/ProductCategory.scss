@@ -1,0 +1,119 @@
+@import "../../app.scss";
+
+.product-category-cover {
+  //   border: 2px solid rgb(209, 135, 15);
+
+  .cover {
+    background-image: url("../../Components/Assets/products/cover.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh;
+  }
+
+  .product-category-indexSort {
+    // border: 2px solid rgb(186, 209, 15);
+
+    display: flex;
+    margin: 0 170px;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-weight: 600;
+    }
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .product-category-sort {
+    // border: 2px solid rgb(186, 209, 15);
+
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+  }
+  .fillter {
+    // border: 2px solid rgb(186, 209, 15);
+
+    display: flex;
+    margin-top: 10px;
+    position: sticky;
+    // position: absolute;
+    // margin-left: 500px;
+    // position: relative;
+    // top: 340px;
+  }
+
+  input {
+    width: 200px;
+    height: 40px;
+    margin-left: auto;
+    border-radius: 17px;
+    border: none !important;
+    font-size: 14px;
+  }
+
+  @include desktop {
+    // border: 2px solid red;
+    .cover {
+      //   border: 2px solid rgb(8, 82, 72);
+      margin: auto;
+    }
+    .product-category-indexSort {
+      //   border: 2px solid rgb(8, 82, 72);
+      width: 90%;
+      margin: auto;
+      p {
+        font-size: 12px;
+      }
+    }
+    .product-category-sort {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+    .fillter {
+      input {
+        width: 200px;
+        font-size: 12px;
+        height: 40px;
+      }
+    }
+  }
+  @include tablet {
+    // border: 2px solid red;
+    .cover {
+      //   border: 2px solid rgb(8, 82, 72);
+      display: none;
+    }
+    .fillter {
+      display: none;
+      input {
+        width: 180px;
+        font-size: 10px;
+        height: 35px;
+      }
+    }
+  }
+  @include mobile {
+    // border: 2px solid red;
+    .fillter {
+      display: none;
+      input {
+        width: 180px;
+        font-size: 10px;
+        height: 35px;
+      }
+    }
+  }
+  @include mobileS {
+    // border: 2px solid red;
+    .fillter {
+      display: none;
+      input {
+        width: 170px;
+        font-size: 10px;
+        height: 30px;
+      }
+    }
+  }
+}

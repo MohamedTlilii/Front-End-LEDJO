@@ -1,0 +1,14 @@
+@import "../../app.scss";
+.hero-title {
+    // border: 2px solid #0ea44d;
+    // margin-top:100px;
+
+    display: flex;
+    flex-direction: column;
+    h3 {
+      color: white;
+      font-size: 30px;
+      font-weight: 600;
+      animation: neonize 1s ease-in-out infinite alternate;
+    }
+  }

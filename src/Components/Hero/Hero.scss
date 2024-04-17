@@ -1,0 +1,193 @@
+@import "../../app.scss";
+
+.hero {
+  // border: 2px solid red;
+  height: 80vh;
+  display: flex;
+
+  .hero-left {
+    // border: 2px solid rgb(0, 68, 255);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 180px;
+    line-height: 1.1;
+
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      animation: neonize 1s ease-in-out infinite alternate;
+
+    }
+
+    p {
+      font-size: 100px;
+      font-weight: 700;
+      animation: neonize 1s ease-in-out infinite alternate;
+
+    }
+
+    .hand-hand-icon {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        width: 105px;
+      }
+    }
+
+    .hero-latest-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      width: 310px;
+      height: 70px;
+      border-radius: 75px;
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: 500;
+      // background-color: #ff13c4;
+    }
+  }
+
+  .hero-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    video {
+      width: 800px;
+    }
+  }
+
+  @include desktop {
+    .hero-left {
+      padding-left: 100px;
+
+      h2 {
+        // font-size: 22px;
+      }
+
+      p {
+        font-size: 59px;
+      }
+
+      .hand-hand-icon img {
+        width: 80px;
+      }
+
+      .hero-latest-btn {
+        gap: 10px;
+        width: 250px;
+        height: 60px;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+    }
+
+    .hero-right video {
+      width: 800px;
+    }
+  }
+
+  @include tablet {
+    .hero-left {
+      padding-left: 80px;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 50px;
+      }
+
+      .hand-hand-icon img {
+        width: 65px;
+      }
+
+      .hero-latest-btn {
+        width: 220px;
+        height: 50px;
+        font-size: 16px;
+      }
+    }
+
+    .hero-right video {
+      width: 700px;
+    }
+  }
+
+  @include mobile {
+    .hero-left {
+      padding-left: 30px;
+
+      h2 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 40px;
+      }
+
+      .hand-hand-icon img {
+        width: 50px;
+      }
+
+      .hero-latest-btn {
+        width: 170px;
+        height: 40px;
+        font-size: 13px;
+      }
+    }
+
+    .hero-right img {
+      width: 300px;
+    }
+  }
+
+  @include mobileS {
+    // flex-direction: column;
+    // position: relative;
+    // padding: auto;
+    // border: 1px solid red;
+    height: auto;
+
+    .hero-left {
+      position: absolute;
+      // margin-top:0.0rem; /* Equivalent to space-y-5 in Tailwind CSS */
+      // border: 1px solid red;
+      width: 500px;
+
+      h2 {
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 40px;
+      }
+
+      .hand-hand-icon img {
+        width: 45px;
+      }
+
+      .hero-latest-btn {
+        width: 200px;
+        height: 45px;
+        font-size: 14px;
+      }
+    }
+
+    .hero-right {
+      // display: none;
+      video {
+        // position: relative;
+      }
+    }
+  }
+}

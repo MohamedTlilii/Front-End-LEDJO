@@ -1,0 +1,311 @@
+@import "../../app.scss";
+
+.popular {
+  // border: 2px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  height: 60vh;
+  h2 {
+    // border: 2px solid red;
+    animation: neonize 1s ease-in-out infinite alternate;
+
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+  }
+
+  .neon-hr {
+    width: 90px !important;
+    height: 6px!important;
+    border-radius: 10px;
+    background-color: white;
+    animation: neonizebar 1s ease-in-out infinite alternate;
+  }
+  @keyframes neonizebar {
+    0% {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
+        0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+    100% {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de,
+        0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+  }
+  .popular-products-item {
+    // border: 2px solid red;
+    // margin: auto!important;
+    margin-top: 10px!important;
+
+  }
+  .popular-item {
+    // border: 2px solid rgb(9, 179, 179);
+    margin-bottom: 150px;
+    display: flex;
+    gap: 0px;
+    align-items: center;
+
+    .item {
+      // border: 2px solid rgb(9, 179, 179);
+      // width: 295px;
+
+      img {
+        // border: 2px solid rgb(9, 179, 179);
+        width: 250px;
+        height: 250px;
+      }
+      .item-flex {
+        // border: 2px solid red;
+        // margin: 6px!important;
+        // margin-left: 35px;
+      }
+      h2 {
+        // border: 2px solid #0fc027;
+        // text-align: center!important;
+
+        font-size: 24px;
+      }
+      p {
+        // border: 2px solid #0fc027;
+      }
+      .item-prices {
+        // border: 2px solid #0fc027;
+
+        .item-price-new {
+          // border: 2px solid #0fc027;
+        }
+        .item-price-old {
+          // border: 2px solid #0fc027;
+        }
+      }
+    }
+  }
+  @include desktop {
+    // border: 2px solid rgb(9, 179, 179);
+    // height: 75vh;
+    h2 {
+      // border: 2px solid red;
+      font-size: 40px;
+    }
+
+    .neon-hr {
+      width: 120px!important;
+      height: 6px!important;
+    }
+
+    .popular-products-item {
+      // border: 2px solid red;
+      // margin: auto;
+      // margin: 0px!important;
+      // padding: 0px!important;
+    }
+    .popular-item {
+      // border: 2px solid rgb(9, 179, 179);
+      // margin-bottom: 150px;
+      // display: flex;
+      // gap: 20px;
+      // align-items:center;
+
+      .item {
+        // border: 2px solid rgb(179, 9, 136);
+        // width: 290px;
+
+        img {
+          // border: 2px solid rgb(9, 179, 179);
+          width: 200px;
+          height: 200px;
+        }
+        .item-flex {
+          // border: 2px solid red;
+          // margin: 0px 16px;
+          margin-left: 0px;
+        }
+        h2 {
+          // border: 2px solid #0fc027;
+          // text-align: center!important;
+
+          font-size: 27px;
+        }
+        p {
+          // border: 2px solid #0fc027;
+        }
+        .item-prices {
+          // border: 2px solid #0fc027;
+
+          .item-price-new {
+            // border: 2px solid #0fc027;
+            font-size: 18px;
+          }
+          .item-price-old {
+            // border: 2px solid #0fc027;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    // border: 2px solid rgb(146, 5, 157);
+    height: 50vh !important;
+    h2 {
+      font-size: 30px;
+    }
+    .neon-hr {
+      // width: 120px;
+      // height: 3px!important;
+    }
+    .popular-products-item {
+      // border: 2px solid red;
+      margin: 0px !important;
+      padding: 0px !important;
+      // height: 445px!important;
+    }
+    .popular-item {
+      // border: 2px solid red;
+      // margin: 10px !important;
+      padding: 10px !important;
+      gap: 5px;
+      margin-top: 20px;
+      .item {
+        // border: 2px solid red;
+        // width: 180px;
+      }
+      img {
+        width: 140px !important;
+        height: 140px !important;
+      }
+      .item-flex {
+        // border: 2px solid red;
+        // margin: 0px 16px;
+        // margin: 0;
+      }
+      h2 {
+        font-size: 21px !important;
+      }
+      p {
+        // border: 2px solid #0fc027;
+      }
+      .item-prices {
+        // border: 2px solid #0fc027;
+
+        .item-price-new {
+          // border: 2px solid #0fc027;
+          font-size: 17px !important;
+        }
+        .item-price-old {
+          // border: 2px solid #0fc027;
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+  @include mobile {
+    // border: 2px solid red;
+    height: 80vh !important;
+
+    h2 {
+      // border: 2px solid red;
+
+      font-size: 50px;
+    }
+    .neon-hr {
+      width: 130px;
+    }
+    .popular-products-item {
+      // border: 2px solid red;
+      margin: 15px;
+      height: 720px !important;
+    }
+    .popular-item {
+      // border: 2px solid red;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      // gap: 10px;
+      .item {
+        // border: 2px solid red;
+        // width: 350px;
+        // height: 350px;
+
+        img {
+          // border: 2px solid red;
+
+          width: 190px !important;
+          height: 190px !important;
+        }
+        .item-flex {
+          // border: 2px solid red;
+          // margin: 0px 16px;
+          // margin-left: 20px!important;
+        }
+        h2 {
+          font-size: 24px !important;
+        }
+        p {
+        }
+      }
+
+      .item-prices {
+        .item-price-new {
+          font-size: 17px !important;
+        }
+        .item-price-old {
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+  @include mobileS {
+    // border: 2px solid red;
+    height: 80vh !important;
+
+    h2 {
+      // border: 2px solid red;
+    }
+    .neon-hr {
+      width: 140px;
+    }
+    .popular-products-item {
+      // border: 2px solid red;
+    }
+    .popular-item {
+      // border: 2px solid red;
+
+      gap: 5px;
+      .item {
+        // border: 2px solid red;
+        // width: 220px;
+
+        img {
+          // border: 2px solid red;
+
+          width: 160px !important;
+          height: 160px !important;
+        }
+        .item-flex {
+          // border: 2px solid red;
+          // margin: 0px 16px;
+          // margin-left: 20px!important;
+          margin: auto !important;
+        }
+        h2 {
+          font-size: 22px !important;
+        }
+        p {
+        }
+      }
+
+      .item-prices {
+        .item-price-new {
+          font-size: 17px !important;
+        }
+        .item-price-old {
+          font-size: 17px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@import "../../app.scss";
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 60px;
+  box-sizing: 0 1px 3px -2px #000;
+  margin-bottom: 1px;
+  background-color: white;
+  height: 10vh;
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    // gap: 10px;
+    cursor: pointer;
+    .nav-logo {
+      // border: 2px solid red;
+      width: 90px;
+    }
+
+    p {
+      // border: 2px solid red;
+
+      font-size: 38px;
+      font-weight: 600;
+      // color: white;
+
+      // animation: neonize 1s ease-in-out infinite alternate;
+    }
+    @keyframes neonize {
+      from {
+        text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 30px #ff319b,
+          0 0 50px #ff319b, 0 0 70px #ff319b, 0 0 90px #ff319b;
+      }
+      to {
+        text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 15px #ff319b,
+          0 0 25px #ff319b, 0 0 35px #ff319b, 0 0 45px #ff319b;
+      }
+    }
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h1 {
+      font-size: 38px;
+      font-weight: 600;
+    }
+    .nav-profile {
+      border-radius: 50%;
+      width: 65px;
+    }
+    .nav-arrow {
+      width: 15px;
+      cursor: pointer;
+    }
+  }
+  @include desktop {
+    // border: 2px solid red;
+
+    .nav-left {
+      cursor: pointer;
+      .nav-logo {
+        // border: 2px solid red;
+      }
+
+      p {
+        // border: 2px solid red;
+      }
+    }
+
+    .nav-right {
+      h1 {
+      }
+      .nav-profile {
+      }
+      .nav-arrow {
+      }
+    }
+  }
+  @include tablet {
+  }
+  @include mobile {
+    // border: 2px solid red;
+    padding: 50px 30px;
+
+    .nav-left {
+      .nav-logo {
+        // border: 2px solid red;
+        width: 60px;
+      }
+
+      p {
+        // border: 2px solid red;
+        font-size: 28px;
+        font-weight: 600;
+      }
+    }
+
+    .nav-right {
+      h1 {
+        font-size: 28px;
+        font-weight: 600;
+      }
+      .nav-profile {
+        width: 45px;
+      }
+      .nav-arrow {
+        width: 10px;
+      }
+    }
+  }
+
+  @include mobileS {
+    // border: 2px solid red;
+    padding: 50px 30px;
+
+    .nav-left {
+      .nav-logo {
+        // border: 2px solid red;
+        width: 60px;
+      }
+
+      p {
+        // border: 2px solid red;
+        font-size: 28px;
+        font-weight: 600;
+      }
+    }
+
+    .nav-right {
+      h1 {
+        font-size: 28px;
+        font-weight: 600;
+      }
+      .nav-profile {
+        width: 45px;
+      }
+      .nav-arrow {
+        width: 10px;
+      }
+    }
+  }
+}

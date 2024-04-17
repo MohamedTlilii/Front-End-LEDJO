@@ -1,0 +1,296 @@
+@import "../../app.scss";
+
+.hedar {
+  // border: 2px solid red;
+  height: 100px;
+
+  .navbar {
+    // border: 2px solid red;
+
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    // box-shadow: 0 1px 3px -2px rgb(252, 70, 70);
+    align-items: center;
+    .navlogo {
+      // border: 2px solid red;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .logo {
+      // border: 2px solid red;
+
+      width: 90px;
+    }
+    p {
+      // border: 2px solid red;
+
+      font-size: 38px;
+      font-weight: 600;
+      color: white;
+      animation: neonize 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes neonize {
+      from {
+        text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 30px #ff319b,
+          0 0 50px #ff319b, 0 0 70px #ff319b, 0 0 90px #ff319b;
+      }
+      to {
+        text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 15px #ff319b,
+          0 0 25px #ff319b, 0 0 35px #ff319b, 0 0 45px #ff319b;
+      }
+    }
+
+    .nav-menu {
+      // border: 2px solid red;
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-size: 20px;
+      font-weight: 500;
+      li {
+        font-weight: bold;
+      }
+
+      hr {
+        // border: 2px solid red;
+
+        border: none;
+        width: 100%;
+        height: 0.5px;
+        border-radius: 10px;
+        // background-color: #ff319b;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Adding transition for smooth color change */
+        animation: neonize 1s ease-in-out infinite alternate;
+      }
+
+      a:hover {
+        color: rgba(220, 7, 89, 0.504); /* Hover color for navbar links */
+      }
+    }
+
+    .nav-login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .button {
+      border: none;
+      border-radius: 50px;
+      padding: 10px;
+      width: 80px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #ff13c4;
+    }
+    .nav-count {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -25px;
+      margin-left: -20px;
+      border-radius: 11px;
+      font-size: 14px;
+      background: red;
+      color: white;
+    }
+    .nav-dropdown {
+      display: none;
+    }
+    @include desktop {
+      // border: 2px solid red;
+      // border: 2px solid red;
+
+      // padding: 12px 50px;
+
+      .navlogo {
+        img {
+          // width: 40px;
+        }
+        p {
+          font-size: 30px;
+        }
+      }
+      .nav-menu {
+        // font-weight: bold;
+        // border: 2px solid red;
+        gap: 30px;
+        font-size: 16px;
+        display: none;
+      }
+      .nav-login {
+        // border: 2px solid red;
+        gap: 30px;
+        // margin-left:200px!important;
+      }
+      .button {
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+      }
+      .GiShoppingCart {
+      }
+      .nav-count {
+        margin-left: -40px;
+        font-size: 12px;
+      }
+    }
+    @include tablet {
+      // border: 2px solid red;
+
+      padding: 12px 30px;
+
+      .navlogo {
+        // border: 2px solid red;
+        margin: 100px;
+
+        img {
+          width: 80px;
+        }
+        p {
+          font-size: 30px;
+        }
+      }
+
+      .nav-menu {
+        // font-weight: bold;
+        // border: 2px solid red;
+        gap: 25px;
+        font-size: 14px;
+        display: none;
+      }
+      .nav-login {
+        // border: 2px solid red;
+        // gap: 30px;
+        // margin-left:-20px!important;
+      }
+      .button {
+        width: 80px;
+        height: 35px;
+        font-size: 14px;
+      }
+      .GiShoppingCart {
+        // border: 2px solid red;
+        width: 30px;
+      }
+      .nav-count {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+      }
+    }
+
+    @include mobile {
+      // border: 2px solid red;
+      padding: 10px 0px;
+      .nav-dropdown {
+        // border: 2px solid red;
+        display: block;
+        width: 30px;
+        rotate: -90deg;
+        transform: 0.5s;
+      }
+      .nav-menu {
+        // font-weight: bold;
+        // border: 2px solid red;
+        display: none;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        //  background-color: white;
+        justify-content: center;
+        top: 85px;
+      }
+      // .nav-menu-visible {
+      //   // border: 2px solid red;
+
+      //   display: flex;
+      // }
+      // .open {
+      //   transform: rotate(90deg);
+      // }
+      .nav-login {
+        // border: 2px solid red;
+        // gap: 30px;
+        position: relative;
+        right:60px!important;
+      }
+      .button {
+        width: 80px;
+        height: 35px;
+        font-size: 14px;
+      }
+      .GiShoppingCart {
+        // border: 2px solid red;
+        width: 30px;
+      }
+      .nav-count {
+      
+      }
+    }
+
+    @include mobileS {
+      // border: 2px solid red;
+      padding: 8px 0px;
+      gap: 0;
+      .navlogo {
+        transform: scale(0.8);
+      }
+      .nav-menu {
+        // border: 2px solid red;
+        // font-weight: bold;
+        height: 70px;
+        top: 85px;
+      }
+      .nav-login {
+        // border: 2px solid red;
+        gap: 30px;
+      }
+      .nav-login {
+        transform: scale(0.8);
+      }
+      .nav-count {
+        // display: none;
+
+      }
+      .GiShoppingCart {
+        // border: 2px solid red;
+        // display: none;
+      }
+    }
+
+    // @include mobile {
+    //           border: 2px solid red;
+
+    //   .logo {
+    //     display: none;
+    //   }
+    //   p {
+    //     display: none;
+    //   }
+
+    //   .nav-menu {
+    //     // font-weight: bold;
+    //     padding: 12px 50px;
+    //     // border: 2px solid red;
+    //   }
+    // }
+  }
+}

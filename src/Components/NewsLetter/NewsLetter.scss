@@ -1,0 +1,144 @@
+@import "../../app.scss";
+
+.news-letter {
+  width: 65%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0px 140px;
+  margin-bottom: 150px;
+  gap: 30px;
+  h1 {
+    font-size: 55px;
+    font-weight: 600;
+    animation: neonize 1s ease-in-out infinite alternate;
+  }
+  p {
+    font-size: 20px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 730px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid #e3e3e3;
+  }
+  input {
+    width: 500px;
+    margin-left: 30px;
+    border: none;
+    outline: none;
+    color: #616161;
+    font-family: Poppins;
+    font-size: 16px;
+  }
+  button {
+    width: 210px;
+    height: 70px;
+    border-radius: 80px;
+    background-color: #ff13c4;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  @include desktop {
+    // border: 2px solid red;
+    padding: 0px 80px;
+    margin-bottom: 90px;
+    gap: 20px;
+
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .news-letter-div {
+      width: 600px;
+      height: 60px;
+      input {
+        width: 400px;
+      }
+      button {
+        width: 160px;
+        height: 60px;
+      }
+    }
+  }
+  @include tablet {
+    margin-bottom: 60px;
+
+    h1 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .news-letter-div {
+      width: 500px;
+      height: 50px;
+      input {
+        width: 300px;
+        font-size: 14px;
+      }
+      button {
+        width: 120px;
+        height: 50px;
+        font-size: 14px;
+      }
+    }
+  }
+  @include mobile {
+    margin-bottom: 30px;
+    height: 35vh;
+
+    h1 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 12px;
+    }
+    .news-letter-div {
+      width: 400px;
+      height: 40px;
+      input {
+        width: 200px;
+        font-size: 13px;
+      }
+      button {
+        width: 100px;
+        height: 40px;
+        font-size: 13px;
+      }
+    }
+  }
+  @include mobileS {
+    height: 25vh;
+    width: 100%;
+    padding: 0;
+    gap: 15px;
+
+    h1 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 13px;
+      max-width: 200px;
+      text-align: center;
+    }
+    .news-letter-div {
+      width: 290px;
+
+      input {
+        width: 130px;
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+@import "../../app.scss";
+
+.offers {
+  height: 60vh;
+  display: flex;
+  // margin: auto !important;
+  padding: 0px 140px;
+  margin-bottom: 150px;
+
+  .offers-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 80px;
+      font-weight: 600;
+      animation: neonize 1s ease-in-out infinite alternate;
+    }
+
+    p {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    button {
+      width: 282px;
+      height: 70px;
+      border-radius: 35px;
+      background-color: #ff13c4;
+      border: none;
+      color: white;
+      font-size: 22px;
+      font-weight: 500;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+  }
+
+  .offers-righet {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 50px;
+    // gap: 20px;
+
+    .offerimage {
+      width: 800px;
+    }
+
+    // .offerimage:hover {
+    //   transform: scale(1.1);
+    //   transition: transform 0.4s ease;
+    //   z-index: 1;
+    // }
+  }
+
+  @include desktop {
+    padding: 0px 80px;
+    margin-bottom: 120px;
+
+    .offers-left {
+      h1 {
+        font-size: 40px !important;
+      }
+
+      p {
+        font-size: 18px !important;
+      }
+
+      button {
+        width: 220px;
+        height: 50px;
+        font-size: 18px;
+      }
+    }
+
+    .offers-righet {
+      padding-top: 30px;
+      .offerimage {
+        // width: 800px !important;
+        // height: 150px !important;
+      }
+    }
+  }
+
+  @include tablet {
+    padding: 0px 60px;
+    margin-bottom: 80px;
+    height: 40vh;
+
+    .offers-left {
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      button {
+        width: 160px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+
+    .offers-righet {
+      padding-top: 10px;
+
+      .offerimage {
+        width: 450px !important;
+      }
+    }
+  }
+
+  @include mobile {
+    // padding: 0px 60px;
+    margin-bottom: 60px;
+    // height: 40vh;
+
+    .offers-left {
+      h1 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      button {
+        width: 140px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+
+    .offers-righet {
+      // padding-top: 10px;
+
+      .offerimage {
+        width: 250px !important;
+      }
+    }
+  }
+
+  @include mobileS {
+  // padding: 0px 60px;
+  margin-bottom: 50px;
+  height: 25vh;
+
+  .offers-left {
+    h1 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 10px;
+    }
+
+    button {
+      width: 120px;
+      height: 25px;
+      font-size: 10px;
+      margin-top: 12px;
+    }
+  }
+
+  .offers-righet {
+    // padding-top: 10px;
+
+    .offerimage {
+      width: 240px !important;
+    }
+  }
+}
+}

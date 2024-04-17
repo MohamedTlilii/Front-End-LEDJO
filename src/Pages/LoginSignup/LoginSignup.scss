@@ -1,0 +1,119 @@
+@import "../../app.scss";
+
+.loginsignup {
+  // border: 2px solid red;
+  width: 100%;
+  height: 90vh;
+  padding-top: 100px;
+  .loginsignup-container {
+    // border: 2px solid rgb(21, 170, 145);
+    width: 620px;
+    height: 600px;
+    background: white;
+    margin: auto;
+    padding: 20px 60px;
+    h1 {
+      //   border: 2px solid rgb(36, 197, 31);
+      color: black;
+      margin: 20px 0px;
+      // font-size: ;
+    }
+    button {
+      width: 500px;
+      height: 72px;
+      color: white;
+      background: #ff4141;
+      margin-top: 30px;
+      border: none;
+      font-size: 24px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .loginsignup-login {
+      //   border: 2px solid rgb(36, 197, 31);
+      margin-top: 20px;
+      color: #5c5c5c;
+      font-size: 18px;
+      font-weight: 500;
+      span {
+        color: #ff4141;
+        font-weight: 600;
+      }
+    }
+    .loginsignup-fields {
+      //   border: 2px solid rgb(42, 31, 197);
+      display: flex;
+      flex-direction: column;
+      gap: 29px;
+      margin-top: 30px;
+      input {
+        height: 72px;
+        width: 100%;
+        padding-left: 20px;
+        border: 1px solid #c9c9c9;
+        color: #5c5c5c;
+        font-size: 18px;
+      }
+    }
+  }
+  .loginsignup-agree {
+    // border: 2px solid rgb(36, 197, 31);
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 20px;
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  @include desktop {
+    // border: 2px solid red;
+    padding-top: 50px;
+    .loginsignup-container {
+      // width: auto;
+      max-width: 500px;
+      // max-height: 500px;
+      h1 {
+        margin: 10px 0px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+    .loginsignup-fields {
+      gap: 20px;
+      margin-top: 20px;
+      input {
+        height: 65px;
+        width: 93%;
+      }
+    }
+    .loginsignup-login {
+      font-size: 16px;
+    }
+    .loginsignup-agree {
+      font-size: 14px;
+      gap: 10px;
+    }
+  }
+  @include tablet {
+    // border: 2px solid red;
+  }
+  @include mobile {
+    // border: 2px solid red;
+
+    .loginsignup-container {
+      padding: 20px 30px;
+      h1 {
+        font-size: 24px;
+      }
+      button {
+        font-size: 16px;
+      }
+    }
+    
+  }
+  @include mobileS {
+    // border: 2px solid red;
+  }
+}

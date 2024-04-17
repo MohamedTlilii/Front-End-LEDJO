@@ -1,0 +1,97 @@
+@import "../../app.scss";
+
+.footer {
+  border-top: 1px solid #ebebeb10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  .footer-logo {
+    display: flex;
+
+    align-items: center;
+    gap: 20px;
+    p {
+      font-size: 46px;
+      font-weight: 700;
+      color: white;
+      animation: neonize 1s ease-in-out infinite alternate;
+    }
+  }
+  .footer-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    font-size: 20px;
+    li {
+      cursor: pointer;
+      animation: neonize 1s ease-in-out infinite alternate;
+    }
+  }
+  .footer-social-icon {
+    display: flex;
+    gap: 20px;
+    .footer-icons-container {
+      padding: 10px;
+      padding-bottom: 6px;
+      // border: 1px solid #ebebeb;
+      cursor: pointer;
+    }
+  }
+  .footer-coyright {
+    border-top: 1px solid #ebebeb10;
+    animation: neonize 1s ease-in-out infinite alternate;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    // margin-bottom: 30px;
+    color: white;
+    font-size: 20px;
+  }
+  @include desktop {
+    // border: 2px solid red;
+  }
+  @include tablet {
+    // border: 2px solid red;
+  }
+  @include mobile {
+    // border: 2px solid red;
+    // gap: 20px;
+    .footer-logo {
+      gap: 10px;
+      align-items: end;
+      p {
+        // border: 2px solid red;
+
+        font-size: 25px;
+      }
+    }
+    .logo {
+      width: 40px;
+    }
+    .footer-links {
+      font-size: 14px;
+      gap: 10px;
+    }
+    .footer-social-icon {
+      img {
+        width: 22px;
+      }
+    }
+    .footer-coyright {
+      font-size: 13px;
+    }
+    .footer-coyright {
+      // border: 2px solid red;
+      // margin: 0!important;
+    }
+  }
+  @include mobileS {
+    // border: 2px solid red;
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../app.scss";
+
+.video-content {
+  border: 2px solid red !important;
+  position: relative;
+  // padding:0 100px;
+  
+
+  video {
+    border: 12px solid rgb(126, 19, 122) !important;
+    // width: 2500px;
+    // height: 718px;
+    // width: auto;
+
+  }
+
+  .content {
+    // border: 2px solid rgb(126, 19, 122) !important;
+    position: absolute;
+    top: 25%;
+    right: 15.5rem;
+
+    .title,
+    .custom-title,
+    .text {
+      
+      margin-top: 1.25rem; /* Equivalent to space-y-5 in Tailwind CSS */
+    }
+
+    .title {
+      font-size: 16px;
+    }
+
+    .custom-title {
+      font-size: 50px;
+      font-weight: 700;
+    }
+
+    .text {
+      font-size: 14px;
+      width: 40%;
+    }
+  }
+
+
+}
+
+@include desktop {
+  .video-content {
+    video {
+    }
+
+    .content {
+    }
+  }
+}
+
+    @include tablet {
+      // border: 2px solid red;
+    }
+
+    @include mobile {
+      // border: 2px solid red;
+    }
+
+    @include mobileS {
+      // border: 2px solid red;
+    }
+
+
+

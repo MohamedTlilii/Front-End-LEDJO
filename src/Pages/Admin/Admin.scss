@@ -1,0 +1,16 @@
+@import "../../app.scss";
+.admin {
+    // border: 2px solid red;
+    display: flex;
+   
+    @include desktop {
+    }
+    @include tablet {
+    }
+    @include mobile {
+        flex-direction: column;
+
+    }
+    @include mobileS {
+    }
+}

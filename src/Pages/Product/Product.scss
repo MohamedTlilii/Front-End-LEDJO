@@ -1,0 +1,22 @@
+@import "../../app.scss";
+.aaaaaa {
+  // border: 2px solid rgb(102, 194, 41);
+
+  height: 200vh;
+  @include desktop {
+    // border: 2px solid red;
+    height: 185vh;
+  }
+  @include tablet {
+    // border: 2px solid red;
+    height: 160vh;
+  }
+  @include mobile {
+    // border: 2px solid red;
+    height:220vh;
+  }
+  @include mobileS {
+    // border: 2px solid red;
+    height: 230vh;
+  }
+}

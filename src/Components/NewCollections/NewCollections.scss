@@ -1,0 +1,242 @@
+@import "../../app.scss";
+
+.new-collections {
+  // border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  height: 90vh;
+  margin-bottom: 100px;
+  h2 {
+    font-size: 25px!important;
+    font-weight: 600;
+    color: white;
+    animation: neonize 1s ease-in-out infinite alternate;
+
+  }
+
+  .neon-hr {
+    width: 130px!important;
+    height: 6px;
+    border-radius: 10px;
+    background-color: white;
+    animation: neonizebar 1s ease-in-out infinite alternate;
+  }
+  .new-collections-products-item {
+  }
+  .collections-items {
+    // border: 2px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 50px;
+    gap: 30px;
+    .item {
+      img {
+        // border: 2px solid rgb(9, 179, 179);
+      }
+      h2 {
+        // border: 2px solid #0fc027;
+      }
+      p {
+        // border: 2px solid #0fc027;
+      }
+      .item-prices {
+        // border: 2px solid #0fc027;
+
+        .item-price-new {
+          // border: 2px solid #0fc027;
+        }
+        .item-price-old {
+          // border: 2px solid #0fc027;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+  //  height: 120vh;
+    h2 {
+    font-size: 50px;
+
+  
+  }
+
+  .neon-hr {
+    width: 200px;
+    height: 6px;
+  
+  }
+  .new-collections-products-item {
+  }
+  .collections-items {
+    // border: 2px solid red;
+ 
+    margin-top: 50px;
+    gap: 30px;
+    .item {
+      img {
+        // border: 2px solid rgb(9, 179, 179);
+        width: 170px;
+        height: 170px;
+      }
+      h2 {
+        // border: 2px solid #0fc027;
+      }
+      p {
+        // border: 2px solid #0fc027;
+      }
+      .item-prices {
+        // border: 2px solid #0fc027;
+
+        .item-price-new {
+          // border: 2px solid #0fc027;
+        }
+        .item-price-old {
+          // border: 2px solid #0fc027;
+        }
+      }
+    }}
+  }
+  @include tablet {
+    // border: 2px solid red;
+    height: 70vh;
+
+    h2 {
+      font-size: 50px;
+  
+    
+    }
+  
+    .neon-hr {
+      width: 200px;
+      height: 6px;
+    
+    }
+    .new-collections-products-item {
+    }
+    .collections-items {
+      // border: 2px solid red;
+   
+      margin-top: 50px;
+      gap: 30px;
+      .item {
+        img {
+          // border: 2px solid rgb(9, 179, 179);
+          width: 120px;
+          height: 120px;
+        }
+        h2 {
+          // border: 2px solid #0fc027;
+          font-size: 22px!important;
+
+        }
+        p {
+          // border: 2px solid #0fc027;
+        }
+        .item-prices {
+          // border: 2px solid #0fc027;
+  
+          .item-price-new {
+            // border: 2px solid #0fc027;
+            font-size: 17px!important;
+
+          }
+          .item-price-old {
+            // border: 2px solid #0fc027;
+            font-size: 17px!important;
+
+          }
+        }
+      }}}
+  @include mobile {
+    // border: 2px solid red;
+    height: 130vh;
+
+    h2 {
+      font-size: 50px!important;
+      // border: 2px solid red;
+
+    
+    }
+  
+    .neon-hr {
+      width: 280px!important;
+      // height: 6px;
+    
+    }
+    .new-collections-products-item {
+    }
+    .collections-items {
+      // border: 2px solid red;
+   
+      display: grid;
+      grid-template-columns: 1fr 1fr  ;
+      margin-top: 50px;
+      gap: 30px;
+      .item {
+        img {
+          // border: 2px solid rgb(9, 179, 179);
+          // width: 120px;
+          // height: 120px;
+        }
+        h2 {
+          // border: 2px solid #0fc027;
+          // font-size: 22px!important;
+
+        }
+        p {
+          // border: 2px solid #0fc027;
+        }
+        .item-prices {
+          // border: 2px solid #0fc027;
+  
+          .item-price-new {
+            // border: 2px solid #0fc027;
+            font-size: 17px!important;
+
+          }
+          .item-price-old {
+            // border: 2px solid #0fc027;
+            font-size: 17px!important;
+
+          }
+        }
+      }}}
+  @include mobileS {
+    // height: 80vh;
+    gap: 6px;
+    // border: 2px solid red;
+    h2 {
+      font-size: 30px!important;
+      // border: 2px solid red;
+
+    
+    }
+    .neon-hr {
+      width: 200px!important;
+    }
+    .item {
+      // border: 2px solid red;
+      // width: 220px;
+
+      img {
+        // border: 2px solid red;
+
+        width: 160px !important;
+        height: 160px !important;
+      }
+      .item-flex {
+        // border: 2px solid red;
+        // margin: 0px 16px;
+        // margin-left: 20px!important;
+        margin: auto !important;
+      }
+      h2 {
+        font-size: 22px !important;
+      }
+      p {
+      }
+    }
+  }
+}
