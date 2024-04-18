@@ -27,11 +27,11 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contacts" element={<Contacts />} />
         <Route path="admin" element={<Admin />} />
-        
       </Route>
       <Route path="/" element={<ConnexionLayout />}>
         {/* <Route path="/login" element={<LoginSignup />} /> */}
         <Route path="/login" element={<LoginSignup />} />
+ 
         <Route path="/cart" element={<Cart />} />
       </Route>
     </Routes>
