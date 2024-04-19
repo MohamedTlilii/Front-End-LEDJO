@@ -4,7 +4,8 @@ import "./Item.scss";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-function Item({ id, name, desc, new_price, old_price, imageUrls }) {
+function Item({ _id, name, desc, new_price, old_price, imageUrls }) {
+  console.log(_id);
   const handleImageError = (e) => {
     e.target.src = "/path/to/placeholder-image.jpg"; // Replace with your placeholder image URL
   };
@@ -21,7 +22,7 @@ function Item({ id, name, desc, new_price, old_price, imageUrls }) {
       }}
       className="item"
     >
-      <Link to={`/product/${id}`}>
+      <Link to={`/product/${_id}`}>
         <img
           onClick={() => window.scrollTo(0, 0)}
           className="image"

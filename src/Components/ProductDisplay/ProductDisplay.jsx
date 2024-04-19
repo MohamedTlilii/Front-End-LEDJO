@@ -1,3 +1,4 @@
+
 import "./ProductDisplay.scss";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
@@ -12,17 +13,19 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 function ProductDisplay() {
-  const { id } = useParams(); // Ensure the parameter name matches the one in your route
+  const { id } = useParams();
+  // console.log(id);
+   // Ensure the parameter name matches the one in your route
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log("ID:", id); // Check if ID is received correctly
+   // Check if ID is received correctly
     const fetchProduct = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get(`https://back-end-ledjo.onrender.com/api/user/getSingleProduct/661d4651e4f009e78efb11b4`);
+        const response = await axios.get(`https://back-end-ledjo.onrender.com/api/user/getSingleProduct/${id}`);
         console.log("API Response:", response.data); // Log API response data
         setProduct(response.data);
         setIsLoading(false);

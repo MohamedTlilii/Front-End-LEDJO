@@ -22,7 +22,7 @@ import UserRoute from "./Routes/UserRoute";
 import AdminRoute from "./Routes/AdminRoute";
 // import BanneRoute from "./Routes/BanneRoute";
 import PrivateRoute from "./Routes/PrivateRoute";
-import ProductDisplay from "./Components/ProductDisplay/ProductDisplay";
+// import ProductDisplay from "./Components/ProductDisplay/ProductDisplay";
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
         <Route index element={<LandingPage />} />
         <Route path="products" element={<Products />} />
         <Route
-          path="product/:productId"
+          path="product/:id"
           element={
             <PrivateRoute>
               <Product  />

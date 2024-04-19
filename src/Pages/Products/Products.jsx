@@ -196,16 +196,17 @@ function Products() {
               {filteredProducts.map((product, index) => (
                 <div className="right-side-container-product" key={product.id}>
                   <Item
-                    id={product.id}
-                    name={product.name}
+                    // id={product.id}
+                    // name={product.name}
                     // desc={product.desc}
-                    imageUrls={product.imageUrls}
+                    // imageUrls={product.imageUrls}
                     // image2={product.image2}
                     // image3={product.image3}
                     // image4={product.image4}
                     // image5={product.image5}
-                    new_price={product.new_price}
-                    old_price={product.old_price}
+                    // new_price={product.new_price}
+                    // old_price={product.old_price}
+                    {...product}
                   />
                   {/* </Link> */}
                 </div>

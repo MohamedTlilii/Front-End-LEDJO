@@ -3,8 +3,10 @@ import "./Popular.scss";
 import Item from "../Item/Items";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export const useFetch = (url, token) => {
+
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
