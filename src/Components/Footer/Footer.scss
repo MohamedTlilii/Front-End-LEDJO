@@ -27,6 +27,8 @@
     font-size: 20px;
     li {
       cursor: pointer;
+      color: white;
+
       animation: neonize 1s ease-in-out infinite alternate;
     }
   }
@@ -43,6 +45,7 @@
   .footer-coyright {
     border-top: 1px solid #ebebeb10;
     animation: neonize 1s ease-in-out infinite alternate;
+    color: white;
 
     display: flex;
     flex-direction: column;

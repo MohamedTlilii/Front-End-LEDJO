@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import "./ProductCategory.scss";
 import { motion } from "framer-motion";
-import dropdown_icon from "../../Components/Assets/dropdown_icon.png";
+// import dropdown_icon from "../../Components/Assets/dropdown_icon.png";
 
 const ProductCategory = ({ setSearch }) => {
+  const [search, setSearchValue] = useState(""); // Define the search state
+
+  console.log("setSearch prop in ProductCategory:", setSearch);
+
   return (
     <div className="product-category-cover">
       <motion.div
@@ -25,8 +29,11 @@ const ProductCategory = ({ setSearch }) => {
         <input
           type="text"
           placeholder="Search"
+          value={search} // Add this line
+
           onChange={(e) => {
-            setSearch(e.target.value);
+            setSearchValue(e.target.value); // Update the search state
+            setSearch(e.target.value); // Pass the search value to the parent component
           }}
         />
       </div>

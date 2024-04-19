@@ -5,30 +5,30 @@ import Item from "../Item/Items";
 import { motion } from "framer-motion";
 
 function RelatedProducts() {
-  const [relatedProducts, setRelatedProducts] = useState([]);
-  useEffect(() => {
-    const categories = ["Mercedes-Benz", "AUDI", "BMW", "TOYOTA"];
+  // const [relatedProducts, setRelatedProducts] = useState([]);
+  // useEffect(() => {
+  //   const categories = ["Mercedes-Benz", "AUDI", "BMW", "TOYOTA"];
 
-    const selectedProducts = categories
-      .map((category) => {
-        const productsInCategory = all_product.filter(
-          (item) => item.category === category
-        );
-        if (productsInCategory.length > 1) {
-          const randomOffset = Math.floor(
-            Math.random() * productsInCategory.length
-          ); // Random offset
-          const secondProductIndex =
-            (1 + randomOffset) % productsInCategory.length; // Ensure index doesn't exceed array length
-          return productsInCategory[secondProductIndex]; // Second product
-        }
-        return null;
-      })
-      .filter((product) => product !== null)
-      .slice(0, 4); // Limit to 4 products
+  //   const selectedProducts = categories
+  //     .map((category) => {
+  //       const productsInCategory = all_product.filter(
+  //         (item) => item.category === category
+  //       );
+  //       if (productsInCategory.length > 1) {
+  //         const randomOffset = Math.floor(
+  //           Math.random() * productsInCategory.length
+  //         ); // Random offset
+  //         const secondProductIndex =
+  //           (1 + randomOffset) % productsInCategory.length; // Ensure index doesn't exceed array length
+  //         return productsInCategory[secondProductIndex]; // Second product
+  //       }
+  //       return null;
+  //     })
+  //     .filter((product) => product !== null)
+  //     .slice(0, 4); // Limit to 4 products
 
-    setRelatedProducts(selectedProducts);
-  }, []);
+  //   setRelatedProducts(selectedProducts);
+  // }, []);
 
   return (
     <motion.div
@@ -41,7 +41,7 @@ function RelatedProducts() {
       <hr className="neon-hr" />{" "}
       <div className="related-products-item">
         <div className="popular-item">
-          {relatedProducts.map((item, index) => (
+          {/* {relatedProducts.map((item, index) => (
             <Item
               key={index}
               id={item.id}
@@ -55,7 +55,7 @@ function RelatedProducts() {
               new_price={item.new_price}
               old_price={item.old_price}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </motion.div>

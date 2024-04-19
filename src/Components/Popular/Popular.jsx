@@ -1,65 +1,72 @@
 import React, { useEffect, useState } from "react";
 import "./Popular.scss";
-import all_product from "../Assets/all_product";
 import Item from "../Item/Items";
 import { motion } from "framer-motion";
+import axios from "axios";
 
-function Popular() {
-  const [popularProducts, setPopularProducts] = useState([]);
+export const useFetch = (url, token) => {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(url, { headers: { token } });
+      setData(response.data.data);
+    } catch (error) {
+      setError(error.message || "Network error");
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
-    const categories = ["Mercedes-Benz", "AUDI", "BMW", "TOYOTA"];
+    fetchData();
+  }, [url, token]);
 
-    const selectedProducts = categories
-      .map((category) => {
-        const productsInCategory = all_product.filter(
-          (item) => item.category === category
-        );
-        if (productsInCategory.length > 1) {
-          const randomOffset = Math.floor(
-            Math.random() * productsInCategory.length
-          ); // Random offset
-          const secondProductIndex =
-            (1 + randomOffset) % productsInCategory.length; // Ensure index doesn't exceed array length
-          return productsInCategory[secondProductIndex]; // Second product
-        }
-        return null;
-      })
-      .filter((product) => product !== null)
-      .slice(0, 4); // Limit to 4 products
+  return { data, error };
+};
 
-    setPopularProducts(selectedProducts);
-  }, []);
+function Popular() {
+  const token = localStorage.getItem("token");
+  const { data, error } = useFetch(
+    "https://back-end-ledjo.onrender.com/api/user/getProducts",
+    token
+  );
+
+  // useEffect(() => {
+  //   console.log("Fetched data:", data); // Log fetched data
+  // }, [data]);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  const shuffledData = data.sort(() => Math.random() - 0.5);
+  const firstFourProducts = shuffledData.slice(0, 4);
 
   return (
     <motion.div
       className="popular"
-        initial={{ x: -500, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-
+      initial={{ x: -500, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <h2>TOP PICKS</h2>
       <hr className="neon-hr" />
       <div className="popular-products-item">
         <div className="popular-item">
-          {popularProducts.map((item, index) => (
-            <div key={index}>
+          {firstFourProducts.map((item) => (
+            <div key={item.id}>
               <Item
+                key={item.id}
                 id={item.id}
                 name={item.name}
-                // desc={item.desc}
-                image1={item.image1}
-                // image2={item.image2}
-                // image3={item.image3}
-                // image4={item.image4}
-                // image5={item.image5}
                 new_price={item.new_price}
                 old_price={item.old_price}
+                imageUrls={item.imageUrls}
               />
             </div>
           ))}
-        </div>{" "}
+        </div>
       </div>
     </motion.div>
   );

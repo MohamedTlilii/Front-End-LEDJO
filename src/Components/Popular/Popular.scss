@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  height: 60vh;
+  height: 70vh;
   h2 {
     // border: 2px solid red;
     animation: neonize 1s ease-in-out infinite alternate;
@@ -62,19 +62,25 @@
         // margin: 6px!important;
         // margin-left: 35px;
       }
-      h2 {
+      h1 {
         // border: 2px solid #0fc027;
         // text-align: center!important;
+        color: white!important;
 
         font-size: 24px;
       }
       p {
         // border: 2px solid #0fc027;
+        color: white!important;
+
       }
       .item-prices {
+        color: white!important;
+
         // border: 2px solid #0fc027;
 
         .item-price-new {
+          
           // border: 2px solid #0fc027;
         }
         .item-price-old {
@@ -123,7 +129,7 @@
           // margin: 0px 16px;
           margin-left: 0px;
         }
-        h2 {
+        h1 {
           // border: 2px solid #0fc027;
           // text-align: center!important;
 
@@ -182,7 +188,7 @@
         // margin: 0px 16px;
         // margin: 0;
       }
-      h2 {
+      h1 {
         font-size: 21px !important;
       }
       p {
@@ -204,7 +210,7 @@
   }
   @include mobile {
     // border: 2px solid red;
-    height: 80vh !important;
+    height: 100vh !important;
 
     h2 {
       // border: 2px solid red;
@@ -241,7 +247,7 @@
           // margin: 0px 16px;
           // margin-left: 20px!important;
         }
-        h2 {
+        h1 {
           font-size: 24px !important;
         }
         p {
@@ -260,7 +266,7 @@
   }
   @include mobileS {
     // border: 2px solid red;
-    height: 80vh !important;
+    height: 90vh !important;
 
     h2 {
       // border: 2px solid red;
@@ -291,7 +297,7 @@
           // margin-left: 20px!important;
           margin: auto !important;
         }
-        h2 {
+        h1 {
           font-size: 22px !important;
         }
         p {
