@@ -93,7 +93,7 @@ function AddProduct() {
   return (
     <div className="add-product">
       <div className="addproduct-name">
-        <p>Product Name</p>
+        <p>Product Title</p>
         <input
           value={productDetails.name}
           onChange={changeHandler}

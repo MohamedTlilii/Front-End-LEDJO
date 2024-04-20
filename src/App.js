@@ -23,6 +23,7 @@ import AdminRoute from "./Routes/AdminRoute";
 // import BanneRoute from "./Routes/BanneRoute";
 import PrivateRoute from "./Routes/PrivateRoute";
 // import ProductDisplay from "./Components/ProductDisplay/ProductDisplay";
+import AdminLayout from "./Layouts/AdminLayout";
 
 function App() {
   return (
@@ -34,17 +35,17 @@ function App() {
           path="product/:id"
           element={
             <PrivateRoute>
-              <Product  />
+              <Product />
             </PrivateRoute>
           }
         />
-     
+
         <Route
           path="profile"
           element={
             <PrivateRoute>
               <Profile />
-             </PrivateRoute>
+            </PrivateRoute>
           }
         />
         <Route path="about" element={<About />} />
@@ -54,14 +55,6 @@ function App() {
             <PrivateRoute>
               <Contacts />
             </PrivateRoute>
-          }
-        />
-        <Route
-          path="/admin"
-          element={
-            <AdminRoute>
-              <Admin />
-            </AdminRoute>
           }
         />
       </Route>
@@ -89,6 +82,17 @@ function App() {
             <UserRoute>
               <Cart />
             </UserRoute>
+          }
+        />
+      </Route>
+
+      <Route path="/" element={<AdminLayout />}>
+        <Route
+          path="/admin"
+          element={
+            <AdminRoute>
+              <Admin />
+            </AdminRoute>
           }
         />
       </Route>

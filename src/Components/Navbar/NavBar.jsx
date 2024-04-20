@@ -8,6 +8,7 @@ import "./NavBar.scss";
 import { GiShoppingCart } from "react-icons/gi";
 import { Link, useNavigate } from "react-router-dom";
 import nav_drop_down from "../Assets/chevron.png";
+import React, { useEffect } from "react";
 
 function NavBar() {
   const navigate = useNavigate();
@@ -23,6 +24,11 @@ function NavBar() {
   let isUser = JSON.parse(localStorage.getItem("isUser"));
   let isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
   let isBanned = JSON.parse(localStorage.getItem("isBanned"));
+  useEffect(() => {
+    if (token && isAdmin) {
+      navigate("/admin");
+    }
+  }, [token, isAdmin, navigate]);
 
   return (
     <motion.div className="hedar">

@@ -3,10 +3,9 @@ import "./Popular.scss";
 import Item from "../Item/Items";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 export const useFetch = (url, token) => {
-
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
@@ -56,16 +55,9 @@ function Popular() {
       <hr className="neon-hr" />
       <div className="popular-products-item">
         <div className="popular-item">
-          {firstFourProducts.map((item) => (
-            <div key={item.id}>
-              <Item
-                key={item.id}
-                id={item.id}
-                name={item.name}
-                new_price={item.new_price}
-                old_price={item.old_price}
-                imageUrls={item.imageUrls}
-              />
+        {firstFourProducts.map((product) => (
+            <div key={product.id}>
+              <Item {...product} />
             </div>
           ))}
         </div>

@@ -12,7 +12,6 @@
     color: white;
     margin: 0;
     animation: neonize 1s ease-in-out infinite alternate;
-
   }
   .neon-hr {
     width: 130px !important;
@@ -22,12 +21,9 @@
     animation: neonizebar 1s ease-in-out infinite alternate;
   }
   .related-products-item {
-    margin-top: 10px!important;
-
-   
+    margin-top: 10px !important;
   }
   .popular-item {
-   
     margin-bottom: 150px;
     display: flex;
     gap: 0px;
@@ -41,16 +37,15 @@
       }
       h1 {
         // border: 2px solid #0fc027;
-        color: white!important;
-
+        color: white !important;
       }
       p {
         // border: 2px solid #0fc027;
+        display: none;
       }
       .item-prices {
         // border: 2px solid #0fc027;
-        color: white!important;
-
+        color: white !important;
 
         .item-price-new {
           // border: 2px solid #0fc027;
@@ -67,7 +62,7 @@
     .popular-item {
       // border: 2px solid red;
       // display: flex;
-      gap:5px;
+      gap: 5px;
       // margin-top: 30px;
     }
   }

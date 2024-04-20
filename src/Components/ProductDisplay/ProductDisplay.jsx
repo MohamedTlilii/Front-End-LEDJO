@@ -4,9 +4,7 @@ import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
 // import { productsContext } from "../../Context/ProductsContextProvider";
 import { motion } from "framer-motion";
-import { useFetch } from "../../utils/useFetch";
 import axios from "axios";
-import { adminUrl, url } from "../../utils/url";
 // import { useNavigate, useParams } from "react-router-dom";
 
 import React, { useState, useEffect } from "react";

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import './Admin.scss';
-import SideBar from '../../Components/SidebarAdmin/Sidebar';
-import AddProduct from '../../Components/AddProduct/AddProduct';
-import ListProduct from '../../Components/ListProduct/ListProduct';
-import NavbarAdmin from '../../Components/NavbarAdmin/Navbar';
+import React, { useState } from "react";
+import "./Admin.scss";
+import SideBar from "../../Components/SidebarAdmin/Sidebar";
+import AddProduct from "../../Components/AddProduct/AddProduct";
+import ListProduct from "../../Components/ListProduct/ListProduct";
+import NavbarAdmin from "../../Components/NavbarAdmin/NavbarAdmin";
 
 function Admin() {
   const [displayAddProduct, setDisplayAddProduct] = useState(false);
@@ -20,7 +20,7 @@ function Admin() {
   };
 
   return (
-    <div className='admin'>
+    <div className="admin">
       {/* <NavbarAdmin/> */}
       <SideBar
         onAddProductClick={handleAddProductClick}

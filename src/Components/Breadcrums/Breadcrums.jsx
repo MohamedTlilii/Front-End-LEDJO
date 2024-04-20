@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Breadcrums.scss";
 import arrow_icon from "../Assets/breadcrum_arrow.png";
 import { motion } from "framer-motion";
 
 function Breadcrums({ product }) {
-  if (!product || !product.category || !product.class || !product.name) {
+  if (!product || !product.category || !product.classe || !product.name) {
     return null; // Or render a placeholder or loading message
   }
 

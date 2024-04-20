@@ -3,29 +3,28 @@ import "./CartItems.scss";
 import remove_icon from "../Assets/cart_cross_icon.png";
 
 const CartItems = () => {
-  // const [cartItems, setCartItems] = useState({});
-  // const all_product = []; // Populate this array with your products
+  const [cartItems, setCartItems] = useState({});
+  const all_product = []; // Populate this array with your products
 
-  // // Define getTotalCartAmount, removeFromCart, and other necessary functions here
-  // const getTotalCartAmount = () => {
-  //   let totalAmount = 0;
-  //   for (const item in cartItems) {
-  //     if (cartItems[item] > 0) {
-  //       let itemInfo = all_product.find((product) => product.id === Number(item));
-  //       totalAmount += itemInfo.new_price * cartItems[item];
-  //     }
-  //   }
-  //   return totalAmount;
-  // };
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = all_product.find((product) => product.id === Number(item));
+        totalAmount += itemInfo.new_price * cartItems[item];
+      }
+    }
+    return totalAmount;
+  };
 
-  // const removeFromCart = (itemId) => {
-  //   setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
-  // };
+  const removeFromCart = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  };
 
-  // // Filter products that are in the cart
-  // const cartProducts = all_product.filter(
-  //   (product) => cartItems[product.id] > 0
-  // );
+  // Filter products that are in the cart
+  const cartProducts = all_product.filter(
+    (product) => cartItems[product.id] > 0
+  );
 
   return (
     <div className="cart-items">
@@ -38,14 +37,31 @@ const CartItems = () => {
         <p>Remove</p>
       </div>
       <hr />
-    
+      {cartProducts.map((product) => (
+        <div key={product.id} className="cat-items-format cart-items-format-main">
+          <img src={product.image1} alt={product.name} className="cat-icon-product-icon" />
+          <p>{product.name}</p>
+          <p>{product.new_price} TND</p>
+          <button className="cart-items-quantity">{cartItems[product.id]}</button>
+          <p>{product.new_price * cartItems[product.id]} TND</p>
+          <img
+            src={remove_icon}
+            alt="Remove"
+            onClick={() => {
+              removeFromCart(product.id);
+            }}
+            className="cat-icon-remove-icon"
+          />
+          <hr />
+        </div>
+      ))}
       <div className="cart-items-down">
         <div className="cart-items-total">
           <h1>Cart Totals</h1>
           <div>
             <div className="cart-items-total-item">
               <p>Subtatal</p>
-              {/* <p>{getTotalCartAmount()} TND</p> */}
+              <p>{getTotalCartAmount()} TND</p>
             </div>
             <hr />
             <div className="cart-items-total-item">
@@ -55,7 +71,7 @@ const CartItems = () => {
             <hr />
             <div className="cart-items-total-item">
               <h3>Total</h3>
-              {/* <h3>{getTotalCartAmount()} TND</h3> */}
+              <h3>{getTotalCartAmount()} TND</h3>
             </div>
           </div>
           <button>PROCEED TO CHECKOUT</button>

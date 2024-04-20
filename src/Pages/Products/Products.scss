@@ -44,8 +44,7 @@
       h1 {
         // border: 2px solid rgb(17, 175, 25);
         animation: neonize 1s ease-in-out infinite alternate;
-        color: white!important;
-
+        color: white !important;
       }
       .left-side-container {
         // border: 2px solid rgb(27, 209, 57);
@@ -120,31 +119,38 @@
       .right-side-container {
         // border: 2px solid red;
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 100px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: space-evenly;
+        // gap: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         margin-top: 40px;
-        padding: 60px;
+        // padding: 60px;
         max-height: 1200px;
         overflow-y: auto;
         height: 120vh;
       }
       .right-side-container-product {
+                    // border: 2px solid rgb(9, 179, 179);
+                    display: flex!important;
+                    flex-direction: column!important;
+                    gap: 20px!important;
+
         .item {
           img {
             // border: 2px solid rgb(9, 179, 179);
           }
           h1 {
             // border: 2px solid #0fc027;
-            color: white!important;
-
+            color: white !important;
           }
           p {
             // border: 2px solid #0fc027;
+            display: none;
           }
           .item-prices {
-            color: white!important;
+            color: white !important;
 
             // border: 2px solid #0fc027;
 
@@ -161,6 +167,44 @@
   }
   @include desktop {
     // border: 2px solid red;
+    .right-side {
+      // border: 2px solid rgb(175, 17, 167);
+     
+
+      .right-side-container {
+        // border: 2px solid red;
+
+        
+        grid-template-columns: 1fr 1fr!important ;
+        
+      }
+      .right-side-container-product {
+        .item {
+          img {
+            // border: 2px solid rgb(9, 179, 179);
+          }
+          h1 {
+            // border: 2px solid #0fc027;
+            color: white !important;
+          }
+          p {
+            // border: 2px solid #0fc027;
+          }
+          .item-prices {
+            color: white !important;
+
+            // border: 2px solid #0fc027;
+
+            .item-price-new {
+              // border: 2px solid #0fc027;
+            }
+            .item-price-old {
+              // border: 2px solid #0fc027;
+            }
+          }
+        }
+      }
+    }
   }
   @include tablet {
     // border: 2px solid red;
@@ -186,7 +230,6 @@
         .left-side-container {
           // border: 2px solid rgb(27, 209, 57);
           width: 270px !important;
-          
         }
       }
     }
@@ -212,7 +255,6 @@
         .left-side-container {
           // border: 2px solid rgb(27, 209, 57);
           width: 270px !important;
-         
         }
       }
     }

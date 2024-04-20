@@ -20,7 +20,7 @@
 
   .neon-hr {
     width: 90px !important;
-    height: 6px!important;
+    height: 6px;
     border-radius: 10px;
     background-color: white;
     animation: neonizebar 1s ease-in-out infinite alternate;
@@ -70,7 +70,8 @@
         font-size: 24px;
       }
       p {
-        // border: 2px solid #0fc027;
+        display: none;
+        border: 2px solid #0fc027;
         color: white!important;
 
       }

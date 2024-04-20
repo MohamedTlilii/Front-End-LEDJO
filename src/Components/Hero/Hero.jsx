@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.scss";
 import { motion } from "framer-motion";
-import VIDEO from "../Assets/hero/vedio-hero.mp4"; // Path to your video file
+import VIDEO from "../Assets/hero/vedio-hero - Trim.mp4"; // Path to your video file
 import hand_icon from "../Assets/hand_icon.png";
 import arrow_icon from "../Assets/arrow.png";
 import hero_img from "../Assets/New folder/hero_image.png";

@@ -6,7 +6,7 @@ import axios from "axios";
 
 // Update the useFetchNewCollections hook to filter products by collection
 export const useFetchNewCollections = (url, token, collection) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -19,6 +19,8 @@ export const useFetchNewCollections = (url, token, collection) => {
             item.collections === collection
           );
           setData(filteredData);
+          console.log("Filtered data:", filteredData); // Log filtered data
+
         } else {
           setData(res.data.data);
         }
@@ -28,10 +30,10 @@ export const useFetchNewCollections = (url, token, collection) => {
         console.error(err);
       });
   }, [url, token, collection]);
-  // Log data when it changes
-  useEffect(() => {
-    // console.log("New Collections Data:", data);
-  }, [data]);
+  // // Log data when it changes
+  // useEffect(() => {
+  //   // console.log("New Collections Data:", data);
+  // }, [data]);
   return { data, error };
 };
 
@@ -42,7 +44,7 @@ function NewCollections() {
   const { data, error } = useFetchNewCollections(
     "https://back-end-ledjo.onrender.com/api/user/getProducts",
     token,
-    collection
+    "new" // Filter by "new" collection
   );
 
   if (error) {
@@ -61,15 +63,16 @@ function NewCollections() {
       <div className="new-collections-products-item">
         <div className="collections-items">
           {data &&
-            data.map((item) => (
-              <div key={item.id}>
+            data.map((product) => (
+              <div key={product.id}>
                 <Item
-                  key={item.id} // Ensure each Item has a unique key prop
-                  id={item.id}
-                  name={item.name}
-                  new_price={item.new_price}
-                  old_price={item.old_price}
-                  imageUrls={item.imageUrls} // Pass imageUrls as a prop
+                  // key={item.id} // Ensure each Item has a unique key prop
+                  // id={item.id}
+                  // name={item.name}
+                  // new_price={item.new_price}
+                  // old_price={item.old_price}
+                  // imageUrls={item.imageUrls} // Pass imageUrls as a prop
+                  {...product}
                 />
               </div>
             ))}

@@ -1,9 +1,9 @@
 import React from "react";
 import "./Offers.scss";
 import p1 from "../Assets/offers/99.png";
-import p2 from "../Assets/offers/p2.jpg";
-import p3 from "../Assets/offers/p3.jpg";
-import p4 from "../Assets/offers/p4.jpg";
+// import p2 from "../Assets/offers/p2.jpg";
+// import p3 from "../Assets/offers/p3.jpg";
+// import p4 from "../Assets/offers/p4.jpg";
 import { motion } from "framer-motion";
 
 function Offers() {
