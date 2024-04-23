@@ -1,6 +1,3 @@
-// import React, { useRef, useState, useContext } from "react";
-// import { productsContext } from "../../Context/ProductsContextProvider";
-
 import SideBar from "../SideBar/SideBar";
 import { motion } from "framer-motion";
 import logo from "../Assets/navbar/logoo.jpg";
@@ -8,18 +5,12 @@ import "./NavBar.scss";
 import { GiShoppingCart } from "react-icons/gi";
 import { Link, useNavigate } from "react-router-dom";
 import nav_drop_down from "../Assets/chevron.png";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 function NavBar() {
   const navigate = useNavigate();
+  const [cartCount, setCartCount] = useState(0); // State variable to track cart count
 
-  // const [menu, setMenu] = useState("home");
-  // const { getTotalCartItems } = useContext(productsContext);
-  // const menuRef = useRef();
-  // const dropdown_toggle =(e)=> {
-  //   menuRef.current.classList.toggle('nav-menu-visible');
-  //   e.target.classList.toggle("open");
-  // }
   let token = localStorage.getItem("token");
   let isUser = JSON.parse(localStorage.getItem("isUser"));
   let isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
@@ -29,6 +20,19 @@ function NavBar() {
       navigate("/admin");
     }
   }, [token, isAdmin, navigate]);
+
+
+ 
+
+
+
+  const handleLogout = () => {
+    localStorage.clear();
+    setTimeout(() => {
+      navigate("/login");
+    }, 100);
+  };
+
 
   return (
     <motion.div className="hedar">
@@ -85,14 +89,7 @@ function NavBar() {
 
         <div className="nav-login">
           {token && !isBanned ? (
-            <Link
-              onClick={() => {
-                localStorage.clear();
-                setTimeout(() => {
-                  navigate("/login");
-                }, 100);
-              }}
-            >
+            <Link onClick={handleLogout}>
               <button className="button">Logout</button>
             </Link>
           ) : (
@@ -113,9 +110,7 @@ function NavBar() {
                   style={{ fontSize: "2rem", cursor: "pointer" }}
                 />
               </Link>
-              <div className="nav-count">
-                {/* {getTotalCartItems()} */}
-                </div>
+              <div className="nav-count">{cartCount} </div>
             </>
           )}
         </div>

@@ -4,6 +4,7 @@ import Item from "../Item/Items";
 import { motion } from "framer-motion";
 import axios from "axios";
 // import { useParams } from "react-router-dom";
+import { PacmanLoader, RingLoader } from "react-spinners";
 
 export const useFetch = (url, token) => {
   const [data, setData] = useState([]);
@@ -55,11 +56,15 @@ function Popular() {
       <hr className="neon-hr" />
       <div className="popular-products-item">
         <div className="popular-item">
-        {firstFourProducts.map((product) => (
-            <div key={product.id}>
-              <Item {...product} />
-            </div>
-          ))}
+          {firstFourProducts ? (
+            firstFourProducts.map((product) => (
+              <div key={product.id}>
+                <Item {...product} />
+              </div>
+            ))
+          ) : (
+            <RingLoader size={70} color="hsl(329, 68%, 44%)" />
+          )}
         </div>
       </div>
     </motion.div>

@@ -1,0 +1,281 @@
+* html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans ", sans-serif;
+}
+
+body {
+  background-color: rgb(0, 0, 0) !important;
+  color: lightgray;
+  font-family: "poppins";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.dashboard {
+  /* border: 2px solid rgb(213, 20, 20); */
+  margin-top: 90px;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  overflow-y: scroll;
+}
+
+.admin-aside {
+  /* border: 2px solid black; */
+  color: aquamarine;
+  height: 100%;
+}
+
+.userCardSolo {
+  /* border: 4px black solid !important; */
+  margin: 50px;
+  height: 470px;
+}
+
+.userItemContainer {
+  /* Your existing styles */
+  height: 503px !important;
+  width: 250px !important;
+  /* Box Shadow */
+  /* box-shadow: 100px 0px 100px 100px rgba(0,0,0,0.1);  */
+  background-color: hsl(150, 15%, 89%) !important;
+}
+
+/* .dashboardProduct {
+  border: 4px black solid !important;
+  margin-top: 90px;
+  min-height: 90vh;
+} */
+.dashboardProductform {
+  border: 1px rgb(149, 149, 149) solid !important;
+  padding: 25px;
+  /* width: 660px;
+  height: 240px;
+  position: absolute;
+  left: 800px;
+  bottom: 820px;
+  border-radius: 10px; */
+}
+
+.imageInput {
+  border: 4px black solid !important;
+}
+
+.custom {
+  width: 632px; /* Adjust the width value as needed */
+}
+
+.form-filter {
+  all: unset;
+}
+
+.table-orders {
+  all: unset;
+}
+
+.orders-container {
+  /* border: 4px black solid !important; */
+  width: 70%;
+  margin: 40px auto;
+  min-height: 100%;
+  /* display: flex; */
+}
+
+.table-data {
+  /* border: 4px black solid !important; */
+  width: 100%;
+  /* margin-top: 130px; */
+}
+
+.profil-container-admin {
+  /* border: 1px rgba(0, 0, 0, 0.264) solid; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.admin_profil_details h3 {
+  font-size: 2rem;
+}
+
+.admin_profil_details span {
+  font-size: 2rem;
+}
+
+.img-box img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.admin_profil_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-profile {
+  /* border: 4px black solid; */
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center !important;
+  align-items: flex-start;
+}
+
+.userItemContainer .ui.button {
+  border: none;
+  /* border-radius: 50; */
+  /* width: 100px; */
+  /* height: 40px; */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.userItemContainer .ui.button.ban {
+  background-color: red;
+  color: white;
+}
+
+.userItemContainer .ui.button.unban {
+  background-color: green;
+  color: white;
+}
+
+.filtring-orders {
+  /* border: 4px black solid !important; */
+  position: relative;
+  left: 1200px;
+  top: 50px;
+}
+
+.signup {
+  width: 100%;
+  height: 120vh;
+  padding-top: 100px;
+}
+.signup .signup-container {
+  width: 620px;
+  height: 650px;
+  background: white;
+  margin: auto;
+  padding: 20px 60px;
+}
+.signup .signup-container h1 {
+  color: black;
+  margin: 20px 0px;
+}
+.signup .signup-container button {
+  width: 500px;
+  height: 72px;
+  color: white;
+  background: #ff4141;
+  margin-top: 30px;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.signup .signup-container .signup- {
+  margin-top: 20px;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500;
+}
+.signup .signup-container .signup- span {
+  color: #ff4141;
+  font-weight: 600;
+}
+.signup .signup-container .signup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin-top: 30px;
+}
+.signup .signup-container .signup-fields input {
+  height: 72px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  color: #5c5c5c;
+  font-size: 18px;
+}
+.signup .signup-agree {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 20px;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 1280px) {
+  .signup {
+    padding-top: 50px;
+  }
+  .signup .signup-container {
+    max-width: 500px;
+  }
+  .signup .signup-container h1 {
+    margin: 10px 0px;
+  }
+  .signup .signup-container button {
+    width: 100%;
+  }
+  .signup .signup-fields {
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .signup .signup-fields input {
+    height: 65px;
+    width: 93%;
+  }
+  .signup .signup- {
+    font-size: 16px;
+  }
+  .signup .signup-agree {
+    font-size: 14px;
+    gap: 10px;
+  }
+}
+@media (max-width: 800px) {
+  .signup .signup-container {
+    padding: 20px 30px;
+  }
+  .signup .signup-container h1 {
+    font-size: 24px;
+  }
+  .signup .signup-container button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .signup .signup-container {
+    padding: 40px 60px;
+  }
+  .signup .signup-container h1 {
+    font-size: 24px;
+  }
+  .signup .signup-container button {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=SignUp.css.map */

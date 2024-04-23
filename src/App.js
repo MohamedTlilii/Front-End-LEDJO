@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import PublicLayout from "./Layouts/PublicLayout";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Products from "./Pages/Products/Products";
-import Profile from "./Pages/Profile/Profile";
+import User from "./Pages/User/User";
 import Contacts from "./Pages/Contacts/Contacts";
 import About from "./Pages/About/About";
 import Product from "./Pages/Product/Product";
@@ -41,10 +41,10 @@ function App() {
         />
 
         <Route
-          path="profile"
+          path="Profile"
           element={
             <PrivateRoute>
-              <Profile />
+              <User />
             </PrivateRoute>
           }
         />

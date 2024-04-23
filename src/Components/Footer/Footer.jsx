@@ -5,8 +5,15 @@ import instagram_icon from "../Assets/footer/instagram_icon.png";
 import pintester_icon from "../Assets/footer/pintester_icon.png";
 import whatsapp_icon from "../Assets/footer/whatsapp_icon.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Footer() {
+  // const navigate = useNavigate();
+  let token = localStorage.getItem("token");
+  let isUser = JSON.parse(localStorage.getItem("isUser"));
+  let isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
+  let isBanned = JSON.parse(localStorage.getItem("isBanned"));
+
   return (
     <motion.div
     initial={{ opacity: 0, scale: 0.5 }}
@@ -30,11 +37,25 @@ function Footer() {
         transition={{ duration: 0.5 }}
         className="footer-links"
       >
-        <li>Company</li>
-        <li>Products</li>
-        <li>Offices</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>{" "}
+          </li>
+          <li>
+            <Link to="/about">About</Link>{" "}
+          </li>
+          {token && isUser && !isBanned && !isAdmin && (
+            <>
+              <li >
+                <Link to="/profile">Profile</Link>{" "}
+              </li>
+              <li>
+                <Link to="/contacts">Contacts</Link>{" "}
+              </li>
+            </>
+          )}
       </motion.ul>
 
       <motion.div

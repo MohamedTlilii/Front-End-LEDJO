@@ -1,0 +1,53 @@
+@import "../../app.scss";
+.sidebar-user {
+  // border: 2px solid red;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  gap: 20px;
+  width: 100%;
+  max-width: 250px;
+  height: 100vh;
+  background: white;
+  color: rgb(3, 3, 3);
+  .sidebar-user-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: #f6f6f6;
+    gap: 20px;
+    
+    cursor: pointer;
+  }
+  @include desktop {
+    padding: 30px 0px;
+    flex-direction: row;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    justify-content: center;
+    .sidebar-user-item {
+      margin: 0;
+  }
+  }
+  @include tablet {
+  }
+  @include mobile {
+  //   // padding: 30px 0px;
+  //   // flex-direction: row;
+  //   // width: 100%;
+  //   // max-width: none;
+  //   // height: auto;
+  //   // justify-content: center;
+  //   .sidebar-user-item {
+  //     margin: 0;
+  // }
+   
+  }
+  @include mobileS {
+  }
+}

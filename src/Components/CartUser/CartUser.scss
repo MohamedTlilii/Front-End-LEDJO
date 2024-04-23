@@ -1,0 +1,59 @@
+@import "../../app.scss";
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.card .content {
+  padding: 15px;
+}
+
+.card .header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card .meta a {
+  color: #007bff;
+}
+
+.card .description {
+  margin-top: 10px;
+}
+
+.card .extra.content {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;}
+  @include desktop {
+    // border: 2px solid red;
+    .card .image img {
+      display: none;
+    }
+  }
+  @include tablet {
+    // border: 2px solid red;
+  }
+  @include mobile {
+    // border: 2px solid red;
+  }
+  @include mobileS {
+    // border: 2px solid red;
+  }
+

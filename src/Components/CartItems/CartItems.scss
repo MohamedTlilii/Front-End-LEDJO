@@ -1,14 +1,15 @@
 @import "../../app.scss";
 .cart-items {
-  // border: 2px solid yellow;
   height: auto;
   margin: 100px 170px;
+  color: white;
   hr {
     height: 3px;
     background-color: white;
     border: 0;
   }
   .cart-items-format-main {
+
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -19,10 +20,12 @@
     font-weight: 600;
   }
   .cat-items-format {
+
     font-size: 17px;
     font-weight: 500;
   }
   .cat-icon-product-icon {
+    
     height: 62px;
   }
   .cart-items-quantity {

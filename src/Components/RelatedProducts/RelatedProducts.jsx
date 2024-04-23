@@ -3,6 +3,7 @@ import "./RelatedProducts.scss";
 import Item from "../Item/Items";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { RingLoader } from "react-spinners"; // Import RingLoader component
 
 export const useFetch = (url, token) => {
   const [data, setData] = useState([]);
@@ -51,11 +52,15 @@ function RelatedProducts() {
       <h2>Related Products</h2>
       <hr className="neon-hr" />{" "}
       <div className="related-products-item">
-        <div className="popular-item">
-        {firstFourProducts.slice(0, 4).map((product) => (
-            <Item key={product.id} {...product} />
-          ))}
-        </div>
+      {data ? (
+          <div className="popular-item">
+            {firstFourProducts.slice(0, 4).map((product) => (
+              <Item key={product.id} {...product} />
+            ))}
+          </div>
+        ) : (
+          <RingLoader size={70} color="hsl(329, 68%, 44%)" />
+        )}
       </div>
     </motion.div>
   );

@@ -1,0 +1,18 @@
+@import "../../app.scss";
+
+.user {
+  // border: 2px solid red;
+  height: 110vh;
+  display: flex;
+  @include desktop {
+    flex-direction: column;
+
+  }
+  @include tablet {
+  }
+  @include mobile {
+
+  }
+  @include mobileS {
+  }
+}

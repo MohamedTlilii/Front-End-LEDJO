@@ -3,6 +3,7 @@ import "./NewCollections.scss";
 import Item from "../Item/Items";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { RingLoader } from "react-spinners"; // Import RingLoader component
 
 // Update the useFetchNewCollections hook to filter products by collection
 export const useFetchNewCollections = (url, token, collection) => {
@@ -15,12 +16,11 @@ export const useFetchNewCollections = (url, token, collection) => {
       .then((res) => {
         // Filter data by collection if collection is provided
         if (collection) {
-          const filteredData = res.data.data.filter((item) =>
-            item.collections === collection
+          const filteredData = res.data.data.filter(
+            (item) => item.collections === collection
           );
           setData(filteredData);
           console.log("Filtered data:", filteredData); // Log filtered data
-
         } else {
           setData(res.data.data);
         }
@@ -62,20 +62,19 @@ function NewCollections() {
       <hr className="neon-hr" />
       <div className="new-collections-products-item">
         <div className="collections-items">
-          {data &&
+          {data ? (
             data.map((product) => (
               <div key={product.id}>
-                <Item
-                  // key={item.id} // Ensure each Item has a unique key prop
-                  // id={item.id}
-                  // name={item.name}
-                  // new_price={item.new_price}
-                  // old_price={item.old_price}
-                  // imageUrls={item.imageUrls} // Pass imageUrls as a prop
-                  {...product}
-                />
+                <Item {...product} />
               </div>
-            ))}
+            ))
+          ) : (
+            <RingLoader
+              size={70}
+              color="hsl(329, 68%, 44%)"
+              style={{ position: "relative", left: "10px" }}
+            />
+          )}
         </div>
       </div>
     </motion.div>

@@ -4,9 +4,10 @@ import "./Products.scss";
 import { motion } from "framer-motion";
 import axios from "axios";
 import Item from "../../Components/Item/Items";
+import { PacmanLoader, RingLoader } from "react-spinners";
 
 function Products() {
-  const [selectedCategory, ] = useState(null);
+  const [selectedCategory] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedClass, setSelectedClass] = useState(null);
 
@@ -42,8 +43,8 @@ function Products() {
     });
     setFilteredProducts(filtered);
   }, [products, selectedCategory, selectedClass, search]);
-// Add this console log to check the filtered data
-// console.log("Filtered Products:", filteredProducts);
+  // Add this console log to check the filtered data
+  // console.log("Filtered Products:", filteredProducts);
   return (
     <div className="page-wrapper">
       {/* ProductCategory component for selecting categories */}
@@ -78,18 +79,10 @@ function Products() {
                     >
                       V Class
                     </li>
-                    <li onClick={() => setSelectedClass("A Class")}>
-                      A Class
-                    </li>
-                    <li onClick={() => setSelectedClass("C Class")}>
-                      C Class
-                    </li>
-                    <li onClick={() => setSelectedClass("E Class")}>
-                      E Class
-                    </li>
-                    <li onClick={() => setSelectedClass("S Class")}>
-                      S Class
-                    </li>
+                    <li onClick={() => setSelectedClass("A Class")}>A Class</li>
+                    <li onClick={() => setSelectedClass("C Class")}>C Class</li>
+                    <li onClick={() => setSelectedClass("E Class")}>E Class</li>
+                    <li onClick={() => setSelectedClass("S Class")}>S Class</li>
                     <li onClick={() => setSelectedClass("GLA Class")}>
                       GLA Class
                     </li>
@@ -132,15 +125,11 @@ function Products() {
                   <span className="product-mark">For TOYOTA</span>
                   <ul className="dropdown-content">
                     <li onClick={() => setSelectedClass("RAV4")}>RAV4</li>
-                    <li onClick={() => setSelectedClass("Corolla")}>
-                      Corolla
-                    </li>
+                    <li onClick={() => setSelectedClass("Corolla")}>Corolla</li>
                     <li onClick={() => setSelectedClass("Vellfire")}>
                       Vellfire
                     </li>
-                    <li onClick={() => setSelectedClass("Alphard")}>
-                      Alphard
-                    </li>
+                    <li onClick={() => setSelectedClass("Alphard")}>Alphard</li>
                     <li onClick={() => setSelectedClass("Camry")}>Camry</li>
                   </ul>
                 </li>
@@ -149,9 +138,7 @@ function Products() {
                   <ul className="dropdown-content">
                     <li onClick={() => setSelectedClass("CRV")}>CRV</li>
                     <li onClick={() => setSelectedClass("Civic")}>Civic</li>
-                    <li onClick={() => setSelectedClass("Accord")}>
-                      Accord
-                    </li>
+                    <li onClick={() => setSelectedClass("Accord")}>Accord</li>
                   </ul>
                 </li>
                 <li className="dropdown">
@@ -166,9 +153,7 @@ function Products() {
                   <ul className="dropdown-content">
                     <li onClick={() => setSelectedClass("CX4")}>CX4</li>
                     <li onClick={() => setSelectedClass("CX5")}>CX5</li>
-                    <li onClick={() => setSelectedClass("3 Axela")}>
-                      3 Axela
-                    </li>
+                    <li onClick={() => setSelectedClass("3 Axela")}>3 Axela</li>
                     <li onClick={() => setSelectedClass("CX6 ATENZA5")}>
                       6 ATENZA
                     </li>
@@ -193,24 +178,22 @@ function Products() {
               className="right-side-container"
             >
               {/* Map products based on selected category */}
-              {filteredProducts.map((product, index) => (
-                <div className="right-side-container-product" key={product.id}>
-                  <Item
-                    // id={product.id}
-                    // name={product.name}
-                    // desc={product.desc}
-                    // imageUrls={product.imageUrls}
-                    // image2={product.image2}
-                    // image3={product.image3}
-                    // image4={product.image4}
-                    // image5={product.image5}
-                    // new_price={product.new_price}
-                    // old_price={product.old_price}
-                    {...product}
-                  />
-                  {/* </Link> */}
-                </div>
-              ))}
+              {filteredProducts ? (
+                filteredProducts.map((product, index) => (
+                  <div
+                    className="right-side-container-product"
+                    key={product.id}
+                  >
+                    <Item {...product} />
+                  </div>
+                ))
+              ) : (
+              <RingLoader
+              size={70}
+              color="hsl(329, 68%, 44%)"
+              style={{ position: "relative", left: "610px" }}
+            />
+              )}
               {/* {console.log("Filtered Products:", filteredProducts)} */}
             </motion.div>
           </div>

@@ -1,0 +1,204 @@
+* html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans ", sans-serif;
+}
+
+body {
+  background-color: rgb(0, 0, 0) !important;
+  color: lightgray;
+  font-family: "poppins";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.dashboard {
+  /* border: 2px solid rgb(213, 20, 20); */
+  margin-top: 90px;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  overflow-y: scroll;
+}
+
+.admin-aside {
+  /* border: 2px solid black; */
+  color: aquamarine;
+  height: 100%;
+}
+
+.userCardSolo {
+  /* border: 4px black solid !important; */
+  margin: 50px;
+  height: 470px;
+}
+
+.userItemContainer {
+  /* Your existing styles */
+  height: 503px !important;
+  width: 250px !important;
+  /* Box Shadow */
+  /* box-shadow: 100px 0px 100px 100px rgba(0,0,0,0.1);  */
+  background-color: hsl(150, 15%, 89%) !important;
+}
+
+/* .dashboardProduct {
+  border: 4px black solid !important;
+  margin-top: 90px;
+  min-height: 90vh;
+} */
+.dashboardProductform {
+  border: 1px rgb(149, 149, 149) solid !important;
+  padding: 25px;
+  /* width: 660px;
+  height: 240px;
+  position: absolute;
+  left: 800px;
+  bottom: 820px;
+  border-radius: 10px; */
+}
+
+.imageInput {
+  border: 4px black solid !important;
+}
+
+.custom {
+  width: 632px; /* Adjust the width value as needed */
+}
+
+.form-filter {
+  all: unset;
+}
+
+.table-orders {
+  all: unset;
+}
+
+.orders-container {
+  /* border: 4px black solid !important; */
+  width: 70%;
+  margin: 40px auto;
+  min-height: 100%;
+  /* display: flex; */
+}
+
+.table-data {
+  /* border: 4px black solid !important; */
+  width: 100%;
+  /* margin-top: 130px; */
+}
+
+.profil-container-admin {
+  /* border: 1px rgba(0, 0, 0, 0.264) solid; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.admin_profil_details h3 {
+  font-size: 2rem;
+}
+
+.admin_profil_details span {
+  font-size: 2rem;
+}
+
+.img-box img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.admin_profil_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-profile {
+  /* border: 4px black solid; */
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center !important;
+  align-items: flex-start;
+}
+
+.userItemContainer .ui.button {
+  border: none;
+  /* border-radius: 50; */
+  /* width: 100px; */
+  /* height: 40px; */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.userItemContainer .ui.button.ban {
+  background-color: red;
+  color: white;
+}
+
+.userItemContainer .ui.button.unban {
+  background-color: green;
+  color: white;
+}
+
+.filtring-orders {
+  /* border: 4px black solid !important; */
+  position: relative;
+  left: 1200px;
+  top: 50px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  gap: 20px;
+  width: 100%;
+  max-width: 250px;
+  height: 100vh;
+  background: white;
+}
+.sidebar .sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #f6f6f6;
+  gap: 20px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .sidebar {
+    padding: 30px 0px;
+    flex-direction: row;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    justify-content: center;
+  }
+  .sidebar .sidebar-item {
+    margin: 0;
+  }
+}/*# sourceMappingURL=Sidebar.css.map */

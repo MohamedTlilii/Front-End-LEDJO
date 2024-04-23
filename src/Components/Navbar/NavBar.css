@@ -1,0 +1,371 @@
+* html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans ", sans-serif;
+}
+
+body {
+  background-color: rgb(0, 0, 0) !important;
+  color: lightgray;
+  font-family: "poppins";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.dashboard {
+  /* border: 2px solid rgb(213, 20, 20); */
+  margin-top: 90px;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  overflow-y: scroll;
+}
+
+.admin-aside {
+  /* border: 2px solid black; */
+  color: aquamarine;
+  height: 100%;
+}
+
+.userCardSolo {
+  /* border: 4px black solid !important; */
+  margin: 50px;
+  height: 470px;
+}
+
+.userItemContainer {
+  /* Your existing styles */
+  height: 503px !important;
+  width: 250px !important;
+  /* Box Shadow */
+  /* box-shadow: 100px 0px 100px 100px rgba(0,0,0,0.1);  */
+  background-color: hsl(150, 15%, 89%) !important;
+}
+
+/* .dashboardProduct {
+  border: 4px black solid !important;
+  margin-top: 90px;
+  min-height: 90vh;
+} */
+.dashboardProductform {
+  border: 1px rgb(149, 149, 149) solid !important;
+  padding: 25px;
+  /* width: 660px;
+  height: 240px;
+  position: absolute;
+  left: 800px;
+  bottom: 820px;
+  border-radius: 10px; */
+}
+
+.imageInput {
+  border: 4px black solid !important;
+}
+
+.custom {
+  width: 632px; /* Adjust the width value as needed */
+}
+
+.form-filter {
+  all: unset;
+}
+
+.table-orders {
+  all: unset;
+}
+
+.orders-container {
+  /* border: 4px black solid !important; */
+  width: 70%;
+  margin: 40px auto;
+  min-height: 100%;
+  /* display: flex; */
+}
+
+.table-data {
+  /* border: 4px black solid !important; */
+  width: 100%;
+  /* margin-top: 130px; */
+}
+
+.profil-container-admin {
+  /* border: 1px rgba(0, 0, 0, 0.264) solid; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.admin_profil_details h3 {
+  font-size: 2rem;
+}
+
+.admin_profil_details span {
+  font-size: 2rem;
+}
+
+.img-box img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.admin_profil_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-profile {
+  /* border: 4px black solid; */
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center !important;
+  align-items: flex-start;
+}
+
+.userItemContainer .ui.button {
+  border: none;
+  /* border-radius: 50; */
+  /* width: 100px; */
+  /* height: 40px; */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.userItemContainer .ui.button.ban {
+  background-color: red;
+  color: white;
+}
+
+.userItemContainer .ui.button.unban {
+  background-color: green;
+  color: white;
+}
+
+.filtring-orders {
+  /* border: 4px black solid !important; */
+  position: relative;
+  left: 1200px;
+  top: 50px;
+}
+
+.hedar {
+  height: 100px;
+}
+.hedar .navbar {
+  background-color: black;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+.hedar .navbar .navlogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.hedar .navbar .logo {
+  width: 90px;
+}
+.hedar .navbar p {
+  font-size: 38px;
+  font-weight: 600;
+  color: white !important;
+  animation: neonize 1s ease-in-out infinite alternate;
+}
+@keyframes neonize {
+  from {
+    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 30px #ff319b, 0 0 50px #ff319b, 0 0 70px #ff319b, 0 0 90px #ff319b;
+  }
+  to {
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 15px #ff319b, 0 0 25px #ff319b, 0 0 35px #ff319b, 0 0 45px #ff319b;
+  }
+}
+.hedar .navbar .nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+.hedar .navbar .nav-menu li {
+  font-weight: bold;
+}
+.hedar .navbar .nav-menu hr {
+  border: none;
+  width: 100%;
+  height: 0.5px;
+  border-radius: 10px;
+  color: white;
+}
+.hedar .navbar .nav-menu a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Adding transition for smooth color change */
+  animation: neonize 1s ease-in-out infinite alternate;
+  color: white;
+}
+.hedar .navbar .nav-menu a:hover {
+  color: rgba(204, 25, 19, 0.504); /* Hover color for navbar links */
+}
+.hedar .navbar .nav-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.hedar .navbar .button {
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  width: 80px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hedar .navbar .button:hover {
+  background-color: red;
+}
+.hedar .navbar .nav-count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -25px;
+  margin-left: -20px;
+  border-radius: 11px;
+  font-size: 14px;
+  background: red;
+  color: white;
+}
+.hedar .navbar .nav-dropdown {
+  display: none;
+}
+@media (max-width: 1280px) {
+  .hedar .navbar .navlogo p {
+    font-size: 30px;
+  }
+  .hedar .navbar .nav-menu {
+    gap: 30px;
+    font-size: 16px;
+    display: none;
+  }
+  .hedar .navbar .nav-login {
+    gap: 30px;
+  }
+  .hedar .navbar .button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .hedar .navbar .nav-count {
+    margin-left: -40px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 1024px) {
+  .hedar .navbar {
+    padding: 12px 30px;
+  }
+  .hedar .navbar .navlogo {
+    margin: 100px;
+  }
+  .hedar .navbar .navlogo img {
+    width: 80px;
+  }
+  .hedar .navbar .navlogo p {
+    font-size: 30px;
+  }
+  .hedar .navbar .nav-menu {
+    gap: 25px;
+    font-size: 14px;
+    display: none;
+  }
+  .hedar .navbar .button {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .hedar .navbar .GiShoppingCart {
+    width: 30px;
+  }
+  .hedar .navbar .nav-count {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 800px) {
+  .hedar .navbar {
+    padding: 10px 0px;
+  }
+  .hedar .navbar .nav-dropdown {
+    display: block;
+    width: 30px;
+    rotate: -90deg;
+    transform: 0.5s;
+  }
+  .hedar .navbar .nav-menu {
+    display: none;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    top: 85px;
+  }
+  .hedar .navbar .nav-login {
+    position: relative;
+    right: 60px !important;
+  }
+  .hedar .navbar .button {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .hedar .navbar .GiShoppingCart {
+    width: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .hedar .navbar {
+    padding: 8px 0px;
+    gap: 0;
+  }
+  .hedar .navbar .navlogo {
+    transform: scale(0.8);
+  }
+  .hedar .navbar .nav-menu {
+    height: 70px;
+    top: 85px;
+  }
+  .hedar .navbar .nav-login {
+    gap: 30px;
+  }
+  .hedar .navbar .nav-login {
+    transform: scale(0.8);
+  }
+}/*# sourceMappingURL=NavBar.css.map */

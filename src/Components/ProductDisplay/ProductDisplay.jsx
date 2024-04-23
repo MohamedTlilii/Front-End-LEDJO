@@ -1,4 +1,3 @@
-
 import "./ProductDisplay.scss";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
@@ -6,25 +5,34 @@ import star_dull_icon from "../Assets/star_dull_icon.png";
 import { motion } from "framer-motion";
 import axios from "axios";
 // import { useNavigate, useParams } from "react-router-dom";
+import { url } from "../../utils/url";
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { RingLoader } from "react-spinners"; // Import RingLoader component
 
-function ProductDisplay() {
+function ProductDisplay({ onCartUpdate }) {
+  let token = localStorage.getItem("token");
+
+  console.log("Token:", token);
+  const [quantity, setQuantity] = useState({ quantity: 1 });
+
   const { id } = useParams();
   // console.log(id);
-   // Ensure the parameter name matches the one in your route
+  // Ensure the parameter name matches the one in your route
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-   // Check if ID is received correctly
+    // Check if ID is received correctly
     const fetchProduct = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get(`https://back-end-ledjo.onrender.com/api/user/getSingleProduct/${id}`);
-        console.log("API Response:", response.data); // Log API response data
+        const response = await axios.get(
+          `https://back-end-ledjo.onrender.com/api/user/getSingleProduct/${id}`
+        );
+        // console.log("API Response:", response.data); // Log API response data
         setProduct(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -32,11 +40,15 @@ function ProductDisplay() {
         setIsLoading(false);
       }
     };
-  
+
     fetchProduct();
   }, [id]);
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <RingLoader
+      size={70} color="hsl(329, 68%, 44%)"
+      />
+    );
   }
 
   if (error) {
@@ -46,6 +58,29 @@ function ProductDisplay() {
   if (!product) {
     return <div>No data available for product ID: {id}</div>;
   }
+  const handleAddProductToCart = () => {
+    // setLoading(true);
+    const quantity = 1;
+    axios
+      .post(
+        `${url}/addProductToCart/${id}`,
+        { quantity },
+        {
+          headers: { token: token }, // Or simply { token } if the variable name matches the header name
+        }
+      )
+      .then((res) => {
+        // setLoading(false);
+        console.log("Product added to cart:", res.data); // Log success message
+
+        console.log(res);
+      })
+      .catch((err) => {
+        // setLoading(false);
+
+        console.dir(err);
+      });
+  };
 
   return (
     <div className="product-display">
@@ -92,24 +127,19 @@ function ProductDisplay() {
             {product.data.new_price}TND
           </div>
         </div>
-        <div className="product-display-right-description">{product.data.desc}</div>
-        <button
-          // onClick={() => {
-          //   {
-          //     addToCart(product.id);
-          //   }
-          // }}
-        >
-          ADD TO CART
-        </button>
-       <div className="product-display-categorys" >
-       <p className="product-display-left-category">
-          <span>Categorey : {product.data.category} </span>
-        </p>
-        <p className="product-display-right-category">
-          <span>Class : {product.data.classe} </span>
-        </p>
-       </div>
+        <div className="product-display-right-description">
+          {product.data.desc}
+        </div>
+        <button onClick={handleAddProductToCart}>ADD TO CART</button>
+
+        <div className="product-display-categorys">
+          <p className="product-display-left-category">
+            <span>Categorey : {product.data.category} </span>
+          </p>
+          <p className="product-display-right-category">
+            <span>Class : {product.data.classe} </span>
+          </p>
+        </div>
       </motion.div>
     </div>
   );
