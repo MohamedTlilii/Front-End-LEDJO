@@ -14,7 +14,7 @@ function Login() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  console.log(loginData);
+  // console.log(loginData);
   const changeHandler = (e) => {
     setloginData({ ...loginData, [e.target.name]: e.target.value });
   };
@@ -31,6 +31,7 @@ function Login() {
         localStorage.setItem("isBanned", res.data.data.isBanned);
         localStorage.setItem("id", res.data.data.id);
        
+        setMessage("Login successful!"); // Set the success message
         setTimeout(() => {
           navigate("/profile");
         }, 3000);
@@ -92,16 +93,21 @@ function Login() {
             <p>{error}</p>
           </Message>
         )}
-       
+      {message && (
+  <Message positive>
+    <MessageHeader>{message} 🥳</MessageHeader>
+    <p>You will be redirected to the Profile page</p> {/* Corrected message */}
+  </Message>
+)}
         <Link to="/signup">
           <p className="login-">
             Create an account? <span>Click here</span>{" "}
           </p>
         </Link>
-        <div className="login-agree">
+        {/* <div className="login-agree">
           <input type="checkbox" name="" id="" />
           <p>By continuing, i agree to the terms of use & privacy policy. </p>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );

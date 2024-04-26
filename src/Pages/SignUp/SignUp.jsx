@@ -120,10 +120,10 @@ function SignUp() {
             Already have an account? <span>Login here</span>{" "}
           </p>
         </Link>
-        <div className="signup-agree">
+        {/* <div className="signup-agree">
           <input type="checkbox" name="" id="" />
           <p>By continuing, i agree to the terms of use & privacy policy. </p>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );

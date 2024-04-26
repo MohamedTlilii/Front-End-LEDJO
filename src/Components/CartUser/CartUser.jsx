@@ -20,6 +20,8 @@ import {
   Form,
 } from "semantic-ui-react";
 import { RingLoader } from "react-spinners"; // Import RingLoader from react-spinners
+import { toast } from "react-toastify";
+
 
 function CartUser() {
   let token = localStorage.getItem("token");
@@ -62,8 +64,17 @@ function CartUser() {
       })
 
       .then((res) => {
-        // setLoading(false);
-
+        setLoading(false);
+        toast.success("User informations was updated successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
         setOpen(false);
       })
       .catch((err) => {
@@ -73,7 +84,7 @@ function CartUser() {
       });
   };
   const handleUpdatePhoto = () => {
-    // setLoadingP(true);
+    setLoadingP(true);
     let userData = new FormData();
     userData.append("photo", updateUserPic);
     axios
@@ -81,8 +92,18 @@ function CartUser() {
         headers: { token },
       })
       .then((res) => {
-        // setLoadingP(false);
+        setLoadingP(false);
 
+        toast.success("Profile Picture was updated successfully", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
         setOpen(false);
       })
       .catch((err) => {
@@ -108,9 +129,9 @@ function CartUser() {
               <Icon name="mail" />
               {data.email}
             </div>
-            <div className="description">
+            {/* <div className="description">
               Matthew is an interior designer living in New York.
-            </div>
+            </div> */}
           </div>
           <div className="extra content">
             <Button

@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import "./Contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 const variants = {
   initial: {
@@ -22,30 +24,39 @@ const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
   const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
+  // const [success, setSuccess] = useState(false);
 
   const isInView = useInView(ref, { margin: "-100px" });
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
     emailjs
       .sendForm(
-        "service_pl28hib",
-        "template_v4ccq3w",
+        "service_xs6h73w",
+        "template_7c8c70p",
         formRef.current,
-        "saRee98rKmN560g8t"
+        "q5zW4xGhNEfsPbF15"
       )
       .then(
         (result) => {
-          setSuccess(true);
+          toast.success("User information was updated successfully", {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+          formRef.current.reset(); // Clear form inputs
         },
         (error) => {
           setError(true);
         }
       );
   };
-
   return (
     <motion.div
       ref={ref}
@@ -55,18 +66,18 @@ const Contact = () => {
       whileInView="animate"
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Let’s work together</motion.h1>
+        <motion.h1 variants={variants}>Contact Us</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <span>ledjo.tn@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Hello street New York</span>
+          <span>06 RUE MADINA MOUNAWRA, Marsa 2046</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>+1 234 5678</span>
+          <span>+216 25 915 401</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -109,9 +120,13 @@ const Contact = () => {
           <input type="text" required placeholder="Name" name="name" />
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message" />
-          <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
+          {/* <button>Submit</button> */}
+          <button>Send</button>
+          {error && (
+            <motion.p className="error" variants={variants}>
+              Error sending message. Please try again later.
+            </motion.p>
+          )}
         </motion.form>
       </div>
     </motion.div>

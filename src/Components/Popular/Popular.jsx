@@ -4,16 +4,18 @@ import Item from "../Item/Items";
 import { motion } from "framer-motion";
 import axios from "axios";
 // import { useParams } from "react-router-dom";
-import { PacmanLoader, RingLoader } from "react-spinners";
+import { RingLoader } from "react-spinners";
 
 export const useFetch = (url, token) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
   const fetchData = async () => {
+    console.log("Fetching data..."); // Log when fetching starts
     try {
       const response = await axios.get(url, { headers: { token } });
       setData(response.data.data);
+      console.log("Data fetched successfully:", response.data.data); // Log fetched data
     } catch (error) {
       setError(error.message || "Network error");
       console.error(error);
@@ -34,8 +36,9 @@ function Popular() {
     token
   );
 
+  // Uncomment this useEffect to log fetched data
   // useEffect(() => {
-  //   console.log("Fetched data:", data); // Log fetched data
+  //   console.log("Fetched data:", data);
   // }, [data]);
 
   if (error) {
