@@ -73,13 +73,14 @@ function Login() {
           />
         </div>
         <Checkbox
-          style={{ margin: "10px" }}
+          style={{ marginTop: "15px" }}
           label="Show password"
           onClick={() => {
             setShowPass(!showPass);
           }}
         />
-        <Button
+        <Button 
+         style={{ marginTop: "15px" }}
           onClick={() => {
             handleLogin();
           }}

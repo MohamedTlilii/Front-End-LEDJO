@@ -24,6 +24,11 @@ section {
   scroll-snap-align: center;
   // t3adi el sections
 }
+@mixin mobileSS {
+  @media (max-width: 300px) {
+    @content;
+  }
+}
 @mixin mobileS {
   @media (max-width: 500px) {
     @content;

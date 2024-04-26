@@ -8,7 +8,7 @@
   .login-container {
     // border: 2px solid rgb(21, 170, 145);
     width: 620px;
-    height: 600px;
+    height: 550px;
     background: white;
     margin: auto;
     padding: 20px 60px;
@@ -29,9 +29,9 @@
       font-weight: 500;
       cursor: pointer;
     }
-   
+
     .login- {
-      //   border: 2px solid rgb(36, 197, 31);
+      // border: 2px solid rgb(36, 197, 31);
       margin-top: 20px;
       color: #5c5c5c;
       font-size: 18px;
@@ -112,16 +112,38 @@
         font-size: 16px;
       }
     }
-    
   }
   @include mobileS {
+    height: auto;
+
     .login-container {
       padding: 40px 60px;
+      width: auto;
+      height: auto;
       h1 {
         font-size: 24px;
       }
       button {
         font-size: 16px;
       }
-    }  }
+      .login- {
+        // border: 2px solid rgb(36, 197, 31);
+        // margin-top: 20px;
+        font-size: 17px;
+        span {
+        }
+      }
+      .login-fields {
+        // border: 2px solid rgb(42, 31, 197);
+
+        gap: 25px;
+        margin-top: 20px;
+        input {
+          height: 62px;
+
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
