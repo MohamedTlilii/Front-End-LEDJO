@@ -16,7 +16,7 @@
     p {
       font-size: 46px;
       font-weight: 700;
-      color: white!important;
+      color: white !important;
       animation: neonize 1s ease-in-out infinite alternate;
     }
   }
@@ -25,14 +25,14 @@
     list-style: none;
     gap: 50px;
     font-size: 20px;
- 
+
     li {
       cursor: pointer;
-      color: white!important;
+      color: white !important;
       animation: neonize 1s ease-in-out infinite alternate;
 
-      &:hover li {
-        color: red!important;
+      a:hover {
+        color: rgba(204, 25, 19, 0.504); /* Hover color for navbar links */
       }
     }
   }
@@ -46,12 +46,13 @@
       padding-bottom: 6px;
       // border: 1px solid #ebebeb;
       cursor: pointer;
+      background-color: white;
     }
   }
   .footer-coyright {
     border-top: 1px solid #ebebeb2f;
     animation: neonize 1s ease-in-out infinite alternate;
-    color: white;
+    // color: white;
 
     display: flex;
     flex-direction: column;
@@ -59,8 +60,8 @@
     gap: 30px;
     width: 100%;
     // margin-bottom: 30px;
-    color: white!important;
-    font-size: 20px;
+    color: white !important;
+    font-size: 17px;
   }
   @include desktop {
     // border: 2px solid red;
@@ -77,11 +78,11 @@
       p {
         // border: 2px solid red;
 
-        font-size: 25px;
+        font-size: 45px;
       }
     }
     .logo {
-      width: 40px;
+      width: 70px;
     }
     .footer-links {
       font-size: 14px;
@@ -101,6 +102,17 @@
     }
   }
   @include mobileS {
-    // border: 2px solid red;
+    height: auto;
+    .footer-logo {
+      // border: 2px solid red;
+      p {
+      }
+      .logo {
+      }
+    }
+    .footer-links {
+      li {
+      }
+    }
   }
 }

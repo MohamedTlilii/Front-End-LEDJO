@@ -47,11 +47,8 @@ function NavBar() {
           <motion.img className="logo" src={logo} alt="logo" />
           <p>LEDJO</p>
         </motion.div>
-        {/* <img
-        //  onClick={dropdown_toggle} 
-         src="" alt="" className="nav-dropdown" /> */}
+       
         <motion.ul
-          // ref={menuRef}
           className="nav-menu"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}

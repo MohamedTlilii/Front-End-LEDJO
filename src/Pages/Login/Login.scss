@@ -115,6 +115,7 @@
   }
   @include mobileS {
     height: auto;
+    padding: 0;
 
     .login-container {
       padding: 40px 60px;

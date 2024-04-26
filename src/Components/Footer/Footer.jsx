@@ -36,9 +36,12 @@ function Footer() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         className="footer-links"
+        
       >
-        <li>
-            <Link to="/">Home</Link>
+        <li >
+            <Link to="/">
+              Home
+              </Link>
           </li>
           <li>
             <Link to="/products">Products</Link>{" "}

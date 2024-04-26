@@ -117,9 +117,7 @@
       background: red;
       color: white;
     }
-    .nav-dropdown {
-      display: none;
-    }
+
     @include desktop {
       // border: 2px solid red;
       // border: 2px solid red;
@@ -252,57 +250,93 @@
       }
     }
 
+    // @include mobileS {
+    //   // padding: 8px 0px;
+    //   justify-content: center;
+    //   // gap: -10px;
+    //   .navbar {
+    //     border: 2px solid red;
+
+    //     .navlogo {
+    //       // border: 2px solid red;
+    //       transform: scale(0.8);
+    //       // position: relative;
+    //       // left: 55px;
+    //       p {
+    //         font-size: 25px !important;
+    //       }
+    //     }
+
+    //     .nav-login {
+    //       border: 2px solid red;
+    //       gap: 10px;
+    //     }
+    //     .nav-login {
+    //       transform: scale(0.7);
+    //     }
+    //     .nav-count {
+    //       // display: none;
+    //     }
+    //     .GiShoppingCart {
+    //       // border: 2px solid red;
+    //       // display: none;
+    //     }
+    //   }
+
+    //   // @include mobile {
+    //   //           border: 2px solid red;
+
+    //   //   .logo {
+    //   //     display: none;
+    //   //   }
+    //   //   p {
+    //   //     display: none;
+    //   //   }
+
+    //   //   .nav-menu {
+    //   //     // font-weight: bold;
+    //   //     padding: 12px 50px;
+    //   //     // border: 2px solid red;
+    //   //   }
+    //   // }
+    // }
+
     @include mobileS {
       // border: 2px solid red;
-      // padding: 8px 0px;
       justify-content: center;
+
       .navlogo {
         // border: 2px solid red;
-        transform: scale(0.8);
-        position: relative;
-        left: 50px;
+        // position: relative;
+        // left: 55px;
       }
+      p {
+        // border: 2px solid red;
 
+        // font-size: 23px !important;
+      }
       .nav-menu {
-        // border: 2px solid red;
-        // font-weight: bold;
-        height: 70px;
-        top: 85px;
+        li {
+          // border: 2px solid red;
+        }
+        hr {
+          // border: 2px solid red;
+        }
+        a {
+          // border: 2px solid red;
+        }
       }
       .nav-login {
-        // border: 2px solid red;
         gap: 10px;
-      
-
-        
-      }
-      .nav-login {
         transform: scale(0.8);
+
+        .button {
+          // border: 2px solid red;
+        }
       }
       .nav-count {
-        // display: none;
-      }
-      .GiShoppingCart {
-        // border: 2px solid red;
-        // display: none;
+        border: 2px solid red;
       }
     }
-
-    // @include mobile {
-    //           border: 2px solid red;
-
-    //   .logo {
-    //     display: none;
-    //   }
-    //   p {
-    //     display: none;
-    //   }
-
-    //   .nav-menu {
-    //     // font-weight: bold;
-    //     padding: 12px 50px;
-    //     // border: 2px solid red;
-    //   }
-    // }
   }
 }
