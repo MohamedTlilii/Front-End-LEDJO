@@ -30,7 +30,13 @@
       cursor: pointer;
       color: white !important;
       animation: neonize 1s ease-in-out infinite alternate;
-
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Adding transition for smooth color change */
+        animation: neonize 1s ease-in-out infinite alternate;
+        color: white;
+      }
       a:hover {
         color: rgba(204, 25, 19, 0.504); /* Hover color for navbar links */
       }

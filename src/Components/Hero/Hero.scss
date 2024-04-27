@@ -18,18 +18,16 @@
     h2 {
       font-size: 26px;
       font-weight: 600;
-      color: white!important;
+      color: white !important;
       animation: neonize 1s ease-in-out infinite alternate;
-
     }
 
     p {
       font-size: 100px;
       font-weight: 700;
-      color: white!important;
+      color: white !important;
 
       animation: neonize 1s ease-in-out infinite alternate;
-
     }
 
     .hand-hand-icon {
@@ -162,11 +160,10 @@
     height: auto;
 
     .hero-left {
-      position: absolute;
-      // margin-top:0.0rem; /* Equivalent to space-y-5 in Tailwind CSS */
       // border: 1px solid red;
-      width: 500px;
-
+      position: absolute;
+      // width: 500px!important;
+      display: none;
       h2 {
         font-size: 15px;
       }
@@ -190,6 +187,10 @@
       // display: none;
       video {
         // position: relative;
+        // width: auto;
+        // height: auto;
+        width: 400px;
+
       }
     }
   }

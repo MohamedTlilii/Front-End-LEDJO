@@ -38,8 +38,7 @@
   .popular-products-item {
     // border: 2px solid red;
     // margin: auto!important;
-    margin-top: 10px!important;
-
+    margin-top: 10px !important;
   }
   .popular-item {
     // border: 2px solid rgb(9, 179, 179);
@@ -65,23 +64,21 @@
       h1 {
         // border: 2px solid #0fc027;
         // text-align: center!important;
-        color: white!important;
+        color: white !important;
 
         font-size: 24px;
       }
       p {
         display: none;
         border: 2px solid #0fc027;
-        color: white!important;
-
+        color: white !important;
       }
       .item-prices {
-        color: white!important;
+        color: white !important;
 
         // border: 2px solid #0fc027;
 
         .item-price-new {
-          
           // border: 2px solid #0fc027;
         }
         .item-price-old {
@@ -99,8 +96,8 @@
     }
 
     .neon-hr {
-      width: 120px!important;
-      height: 6px!important;
+      width: 120px !important;
+      height: 6px !important;
     }
 
     .popular-products-item {
@@ -211,7 +208,7 @@
   }
   @include mobile {
     // border: 2px solid red;
-    height: 100vh !important;
+    height: 110vh !important;
 
     h2 {
       // border: 2px solid red;
@@ -266,31 +263,35 @@
     }
   }
   @include mobileS {
-    // border: 2px solid red;
-    height: 90vh !important;
+    // border: 2px solid rgb(255, 0, 242);
+    height: 85vh !important;
 
     h2 {
       // border: 2px solid red;
+      font-size: 40px;
+      margin-top: 30px !important;
     }
     .neon-hr {
       width: 140px;
     }
     .popular-products-item {
-      // border: 2px solid red;
+      // border: 2px solid rgb(0, 17, 255);
+      height: 500px !important;
+      // margin-top: 30px !important;
     }
     .popular-item {
-      // border: 2px solid red;
+      // border: 2px solid rgb(0, 255, 200);
+      text-align: center;
 
-      gap: 5px;
       .item {
         // border: 2px solid red;
-        // width: 220px;
-
+        width: 200px;
+        height: 200px;
         img {
           // border: 2px solid red;
 
-          width: 160px !important;
-          height: 160px !important;
+          width: 100px !important;
+          height: 100px !important;
         }
         .item-flex {
           // border: 2px solid red;
@@ -299,18 +300,22 @@
           margin: auto !important;
         }
         h1 {
-          font-size: 22px !important;
+          // border: 2px solid red;
+
+          font-size: 17px !important;
         }
         p {
         }
       }
 
       .item-prices {
+        // border: 2px solid red;
+
         .item-price-new {
-          font-size: 17px !important;
+          font-size: 12px !important;
         }
         .item-price-old {
-          font-size: 17px !important;
+          font-size: 12px !important;
         }
       }
     }
