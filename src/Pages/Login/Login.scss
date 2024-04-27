@@ -114,35 +114,35 @@
     }
   }
   @include mobileS {
-    height: auto;
-    padding: 0;
+    height: auto!important;
+    padding: 0!important;
 
     .login-container {
-      padding: 40px 60px;
-      width: auto;
-      height: auto;
+      padding: 40px 60px!important;
+      width: auto!important;
+      height: auto!important;
       h1 {
-        font-size: 24px;
+        font-size: 24px!important;
       }
       button {
-        font-size: 16px;
+        font-size: 16px!important;
       }
       .login- {
         // border: 2px solid rgb(36, 197, 31);
         // margin-top: 20px;
-        font-size: 17px;
+        font-size: 17px!important;
         span {
         }
       }
       .login-fields {
         // border: 2px solid rgb(42, 31, 197);
 
-        gap: 25px;
-        margin-top: 20px;
+        gap: 25px!important;
+        margin-top: 20px!important;
         input {
-          height: 62px;
+          height: 62px!important;
 
-          font-size: 16px;
+          font-size: 16px!important;
         }
       }
     }
