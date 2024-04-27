@@ -5,20 +5,24 @@ import p1 from "../Assets/offers/99.png";
 // import p3 from "../Assets/offers/p3.jpg";
 // import p4 from "../Assets/offers/p4.jpg";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Offers() {
   return (
     <div className="offers">
       <motion.div
-         initial={{ x: 500, opacity: 0 }}
-         animate={{ x: 0, opacity: 1 }}
-         transition={{ duration: 0.5 }}
+        initial={{ x: 500, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
         className="offers-left"
       >
         <h1>Exclusive</h1>
         <h1>Offers For You</h1>
         <p>ONLY ON BEST SELLERS PRODUCTS</p>
-        <button> Check Now</button>
+        <Link to="/products">
+          {" "}
+          <button> Check Now</button>
+        </Link>
       </motion.div>
       <motion.div
         className="offers-righet"
