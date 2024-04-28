@@ -6,39 +6,40 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  height: 90vh;
-  margin-bottom: 100px;
-  h2 {
-    font-size: 25px!important;
-    font-weight: 600;
-    color: white!important;
-    animation: neonize 1s ease-in-out infinite alternate;
+  height: 90vh !important;
+  // margin-bottom: 100px!important;
 
+  h2 {
+    font-size: 25px !important;
+    font-weight: 600;
+    color: white !important;
+    animation: neonize 1s ease-in-out infinite alternate;
   }
 
   .neon-hr {
-    width: 130px!important;
+    width: 130px !important;
     height: 6px;
     border-radius: 10px;
-    background-color: white!important;
-    color: white!important;
+    background-color: white !important;
+    color: white !important;
 
     animation: neonizebar 1s ease-in-out infinite alternate;
   }
   .new-collections-products-item {
+    margin-top: 10px !important;
   }
   .collections-items {
     // border: 2px solid red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 50px;
-    gap: 30px;
+    margin-top: 50px !important;
+    gap: 30px ;
     .item {
       img {
         // border: 2px solid rgb(9, 179, 179);
       }
       h1 {
-        color: white!important;
+        color: white !important;
 
         // border: 2px solid #0fc027;
       }
@@ -48,8 +49,7 @@
       }
       .item-prices {
         // border: 2px solid #0fc027;
-        color: white!important;
-
+        color: white !important;
 
         .item-price-new {
           // border: 2px solid #0fc027;
@@ -62,69 +62,67 @@
   }
 
   @include desktop {
-  //  height: 120vh;
-    h2 {
-    font-size: 50px;
-
-  
-  }
-
-  .neon-hr {
-    width: 200px;
-    height: 6px;
-  
-  }
-  .new-collections-products-item {
-  }
-  .collections-items {
-    // border: 2px solid red;
- 
-    margin-top: 50px;
-    gap: 30px;
-    .item {
-      img {
-        // border: 2px solid rgb(9, 179, 179);
-        width: 170px;
-        height: 170px;
-      }
-      h1 {
-        // border: 2px solid #0fc027;
-      }
-      p {
-        // border: 2px solid #0fc027;
-      }
-      .item-prices {
-        // border: 2px solid #0fc027;
-
-        .item-price-new {
-          // border: 2px solid #0fc027;
-        }
-        .item-price-old {
-          // border: 2px solid #0fc027;
-        }
-      }
-    }}
-  }
-  @include tablet {
-    // border: 2px solid red;
-    height: 70vh;
-
+    
+    height: auto !important;
     h2 {
       font-size: 50px;
-  
-    
     }
-  
+
     .neon-hr {
       width: 200px;
       height: 6px;
-    
     }
     .new-collections-products-item {
     }
     .collections-items {
       // border: 2px solid red;
-   
+
+      margin-top: 50px;
+      gap: 30px;
+      .item {
+        img {
+          // border: 2px solid rgb(9, 179, 179);
+          width: 170px;
+          height: 170px;
+        }
+        h1 {
+          // border: 2px solid #0fc027;
+        }
+        p {
+          // border: 2px solid #0fc027;
+        }
+        .item-prices {
+          // border: 2px solid #0fc027;
+
+          .item-price-new {
+            // border: 2px solid #0fc027;
+          }
+          .item-price-old {
+            // border: 2px solid #0fc027;
+          }
+        }
+      }
+    }
+  }
+  @include tablet {
+    // border: 2px solid red;
+
+    h2 {
+      font-size: 50px;
+    }
+
+    .neon-hr {
+      width: 200px;
+      height: 6px;
+    }
+    .new-collections-products-item {
+      // border: 2px solid red;
+      // width: fit-content!important;
+      // grid-template-columns: 1fr 5fr!important ;
+    }
+    .collections-items {
+      // border: 2px solid red;
+
       margin-top: 50px;
       gap: 30px;
       .item {
@@ -135,50 +133,46 @@
         }
         h1 {
           // border: 2px solid #0fc027;
-          font-size: 22px!important;
-
+          font-size: 22px !important;
         }
         p {
           // border: 2px solid #0fc027;
         }
         .item-prices {
           // border: 2px solid #0fc027;
-  
+
           .item-price-new {
             // border: 2px solid #0fc027;
-            font-size: 17px!important;
-
+            font-size: 17px !important;
           }
           .item-price-old {
             // border: 2px solid #0fc027;
-            font-size: 17px!important;
-
+            font-size: 17px !important;
           }
         }
-      }}}
+      }
+    }
+  }
   @include mobile {
     // border: 2px solid red;
-    height: 130vh;
+    // height: 130vh;
 
     h2 {
-      font-size: 50px!important;
+      font-size: 50px !important;
       // border: 2px solid red;
-
-    
     }
-  
+
     .neon-hr {
-      width: 280px!important;
+      width: 280px !important;
       // height: 6px;
-    
     }
     .new-collections-products-item {
     }
     .collections-items {
       // border: 2px solid red;
-   
+
       display: grid;
-      grid-template-columns: 1fr 1fr  ;
+      grid-template-columns: 1fr 1fr;
       margin-top: 50px;
       gap: 30px;
       .item {
@@ -190,61 +184,84 @@
         h1 {
           // border: 2px solid #0fc027;
           // font-size: 22px!important;
-
         }
         p {
           // border: 2px solid #0fc027;
         }
         .item-prices {
           // border: 2px solid #0fc027;
-  
+
           .item-price-new {
             // border: 2px solid #0fc027;
-            font-size: 17px!important;
-
+            font-size: 17px !important;
           }
           .item-price-old {
             // border: 2px solid #0fc027;
-            font-size: 17px!important;
-
+            font-size: 17px !important;
           }
         }
-      }}}
+      }
+    }
+  }
   @include mobileS {
-        // border: 2px solid red;
-
-    height: 165vh;
-    gap: 6px;
+    // border: 2px solid red;
+    // height: auto !important;
+    // gap: 86px!important;
     // border: 2px solid red;
     h2 {
-      font-size: 30px!important;
+      font-size: 30px !important;
       // border: 2px solid red;
-
-    
     }
     .neon-hr {
-      width: 200px!important;
+      width: 200px !important;
     }
-    .item {
-      // border: 2px solid red;
-      // width: 220px;
+    .new-collections-products-item {
+      // border: 2px solid rgb(0, 17, 255);
+      // height: 500px !important;
+      // width: fit-content!important;
+      // grid-template-columns: 1fr 5fr!important ;
+      // width: 400px;
+    }
+    .collections-items {
+      // border: 2px solid rgb(0, 255, 200);
+      text-align: center !important;
 
-      img {
-        // border: 2px solid red;
+      .item {
+        //  border: 2px solid red;
+        width: 200px !important;
+        height: 200px !important;
+        img {
+          // border: 2px solid red;
 
-        width: 160px !important;
-        height: 160px !important;
-      }
-      .item-flex {
-        // border: 2px solid red;
-        // margin: 0px 16px;
-        // margin-left: 20px!important;
-        margin: auto !important;
-      }
-      h1 {
-        font-size: 22px !important;
-      }
-      p {
+          width: 70px !important;
+          height: 70px !important;
+        }
+        .item-flex {
+          // border: 2px solid red;
+          // margin: 0px 16px;
+          // margin-left: 20px!important;
+          margin: auto !important;
+        }
+        h1 {
+          // border: 2px solid red;
+
+          font-size: 11px !important;
+        }
+        p {
+        }
+
+        .item-prices {
+          // font-size: 12px !important;
+
+          // border: 2px solid red;
+          .item-price-new {
+            // font-size: 12px !important;
+            font-size: 12px !important;
+          }
+          .item-price-old {
+            font-size: 10px !important;
+          }
+        }
       }
     }
   }

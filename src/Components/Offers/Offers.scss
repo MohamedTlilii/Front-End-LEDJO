@@ -2,7 +2,7 @@
 
 .offers {
   // border: 2px solid red;
-  height: 70vh;
+  height: auto !important;
   display: flex;
   // margin: auto !important;
   padding: 0px 140px;
@@ -65,6 +65,7 @@ gap: 10px!important;
   }
 
   @include desktop {
+    
     padding: 0px 80px;
     margin-bottom: 120px;
 
@@ -96,7 +97,7 @@ gap: 10px!important;
   @include tablet {
     padding: 0px 60px;
     margin-bottom: 80px;
-    height: 40vh;
+    // height: auto !important;
 
     .offers-left {
       h1 {
@@ -158,14 +159,15 @@ gap: 10px!important;
   @include mobileS {
     // border: 2px solid red;
   // padding: 0px 60px;
-  margin-bottom: 50px;
-  height: 25vh;
+  margin-bottom: 50px!important;
+  height: auto !important;
 
   .offers-left {
     // border: 2px solid rgb(0, 255, 149);
     align-items: center;
+    gap: 5px;
     h1 {
-      font-size: 16px!important;
+      font-size: 26px!important;
     }
 
     p {
@@ -175,9 +177,9 @@ gap: 10px!important;
     }
 
     button {
-      width: 120px;
+      width: 90px;
       height: 25px;
-      font-size: 10px;
+      font-size: 11px;
       margin-top: 12px;
     }
   }

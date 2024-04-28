@@ -67,6 +67,8 @@
   }
 
   @include desktop {
+        // border: 2px solid rgb(0, 68, 255);
+
     .hero-left {
       padding-left: 100px;
 
@@ -125,6 +127,7 @@
   }
 
   @include mobile {
+    
     .hero-left {
       padding-left: 30px;
 
