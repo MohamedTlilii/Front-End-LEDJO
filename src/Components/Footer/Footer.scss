@@ -46,14 +46,19 @@
   .footer-social-icon {
     // background-color: white;
     display: flex;
-    gap: 20px;
+    // gap: 20px;
     .footer-icons-container {
+      // border: 2px SOLID red;
       padding: 10px;
       padding-bottom: 6px;
       // border: 1px solid #ebebeb;
       cursor: pointer;
-      background-color: white;
+    img {
+      width: 20px;
+      height: 20px;
+    } 
     }
+    
   }
   .footer-coyright {
     border-top: 1px solid #ebebeb2f;

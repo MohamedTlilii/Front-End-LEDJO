@@ -1,13 +1,17 @@
 @import "../../app.scss";
 
 .product-category-cover {
-  //   border: 2px solid rgb(209, 135, 15);
+    // border: 2px solid rgb(209, 135, 15);
 
   .cover {
     background-image: url("../../Components/Assets/products/cover.webp");
     background-repeat: no-repeat;
     background-position: center;
     height: 40vh;
+    background-size:cover; // Ensures the entire image is visible
+
+    width: 100%; // Make the width responsive
+
   }
 
   .product-category-indexSort {

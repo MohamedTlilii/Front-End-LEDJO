@@ -6,6 +6,7 @@ import pintester_icon from "../Assets/footer/pintester_icon.png";
 import whatsapp_icon from "../Assets/footer/whatsapp_icon.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { CiInstagram } from "react-icons/ci";
 
 function Footer() {
   // const navigate = useNavigate();
@@ -57,6 +58,7 @@ function Footer() {
               <li>
                 <Link to="/contacts">Contacts</Link>{" "}
               </li>
+              
             </>
           )}
       </motion.ul>
@@ -67,7 +69,7 @@ function Footer() {
         transition={{ duration: 0.5 }}
         className="footer-social-icon"
       >
-        <motion.div className="footer-icons-container" initial={{ x: -1000 }} animate={{ x: 0 }}>
+        {/* <motion.div className="footer-icons-container" initial={{ x: -1000 }} animate={{ x: 0 }}>
           <img src={instagram_icon} alt="Instagram" />
         </motion.div>
         <motion.div className="footer-icons-container" initial={{ x: 1000 }} animate={{ x: 0 }}>
@@ -75,7 +77,7 @@ function Footer() {
         </motion.div>
         <motion.div className="footer-icons-container" initial={{ x: 1000 }} animate={{ x: 0 }}>
           <img src={whatsapp_icon} alt="WhatsApp" />
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       <div className="footer-coyright">
