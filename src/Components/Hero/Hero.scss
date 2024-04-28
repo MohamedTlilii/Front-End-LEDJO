@@ -131,6 +131,8 @@
   }
 
   @include mobile {
+    height: auto!important;
+
     .hero-left {
       padding-left: 30px;
       display: none;
@@ -164,7 +166,6 @@
         // width: auto;
         // height: auto;
         width: 100%;
-        height: auto;
         object-fit: cover;
         margin: 0;
         

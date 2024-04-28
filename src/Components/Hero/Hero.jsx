@@ -34,9 +34,9 @@ function Hero() {
         transition={{ duration: 0.5 }}
         className="hero-right"
       >
-        <video autoPlay loop muted>
-          <source src={VIDEO} type="video/mp4" />
-        </video>
+       <video autoPlay loop muted controlsList="nodownload nofullscreen noremoteplayback">
+    <source src={VIDEO} type="video/mp4" />
+  </video>
       </motion.div>
     </div>
   );
