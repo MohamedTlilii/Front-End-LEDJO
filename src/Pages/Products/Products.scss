@@ -15,7 +15,7 @@
   }
   @include mobileS {
     // border: 2px solid red;
-    height: auto;
+    height: 1200px;
   }
 }
 
@@ -46,6 +46,8 @@
         // border: 2px solid rgb(17, 175, 25);
         animation: neonize 1s ease-in-out infinite alternate;
         color: white !important;
+        margin: 0; /* Remove default margin */
+        text-decoration: none; /* Remove underline decoration */
       }
       .left-side-container {
         // border: 2px solid rgb(27, 209, 57);
@@ -361,7 +363,7 @@
     }
   }
   @include mobileS {
-    // border: 2px solid red;
+    // border: 2px solid red!important;
     // height: 180vh;
     // text-align: center;
     .products-content {
