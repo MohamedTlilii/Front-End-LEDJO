@@ -4,7 +4,10 @@
   // border: 2px solid red;
   height: 90vh;
   display: flex;
-
+  // width: auto;
+  background-image: url('../../Components/Assets/hero/1682069.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   .hero-left {
     // border: 2px solid rgb(0, 68, 255);
     flex: 1;
@@ -62,9 +65,12 @@
     justify-content: center;
 
     video {
+      // border: 2px solid red;
       margin-right: 300px;
+      border: none;
 
       width: 700px;
+      // width: auto;
     }
   }
 
@@ -132,6 +138,8 @@
 
   @include mobile {
     height: auto!important;
+    width: auto!important;
+    // border: 2px solid red;
 
     .hero-left {
       padding-left: 30px;

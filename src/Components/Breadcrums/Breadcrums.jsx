@@ -4,6 +4,7 @@ import arrow_icon from "../Assets/breadcrum_arrow.png";
 import { motion } from "framer-motion";
 
 function Breadcrums({ product }) {
+  // console.log(product);
   if (!product || !product.category || !product.classe || !product.name) {
     return null; // Or render a placeholder or loading message
   }

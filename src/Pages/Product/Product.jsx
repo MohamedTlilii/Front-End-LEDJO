@@ -21,7 +21,7 @@ function Product() {
   }, [productId]);
 
   return (
-    <div className="aaaaaa"> 
+    <div className="product"> 
       <Breadcrums product={product} />
       <ProductDisplay product={product} />
       <DescriptionBox />

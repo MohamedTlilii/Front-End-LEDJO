@@ -23,6 +23,7 @@ function ProductDisplay({ onCartUpdate }) {
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [mainImage, setMainImage] = useState(null);
 
   useEffect(() => {
     // Check if ID is received correctly
@@ -43,12 +44,20 @@ function ProductDisplay({ onCartUpdate }) {
 
     fetchProduct();
   }, [id]);
+  const handleImageClick = (imageUrl) => {
+    // Move the current main image to the list
+    setMainImage((prevMainImage) => {
+      if (prevMainImage && !product.data.imageUrls.includes(prevMainImage)) {
+        return [...product.data.imageUrls.slice(0, 3), prevMainImage];
+      }
+      return [...product.data.imageUrls.slice(0, 3)];
+    });
+
+    // Set the clicked image as the main image
+    setMainImage(imageUrl);
+  };
   if (isLoading) {
-    return (
-      <RingLoader
-      size={70} color="hsl(329, 68%, 44%)"
-      />
-    );
+    return <RingLoader size={70} color="hsl(329, 68%, 44%)" />;
   }
 
   if (error) {
@@ -85,25 +94,30 @@ function ProductDisplay({ onCartUpdate }) {
   return (
     <div className="product-display">
       <motion.div
-        initial={{ opacity: 0, x: -700 }} // Adjust x to control the starting position
-        animate={{ opacity: 1, x: 0 }} // Adjust x to control the ending position
+        initial={{ opacity: 0, x: -700 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         className="product-display-left"
       >
         <div className="product-diaply-img-list">
-          <img src={product.data.imageUrls[1]} alt="" />
-          <img src={product.data.imageUrls[2]} alt="" />
-          <img src={product.data.imageUrls[3]} alt="" />
-          <img src={product.data.imageUrls[4]} alt="" />
+        {product.data.imageUrls.slice(0, 4).map((imageUrl, index) => (
+            <img
+              key={index}
+              src={imageUrl}
+              alt=""
+              onClick={() => handleImageClick(imageUrl)}
+            />
+          ))}
         </div>
         <div className="product-display-img">
-          <img
+        <img
             className="product-display-main-img"
-            src={product.data.imageUrls[0]}
+            src={mainImage || product.data.imageUrls[0]}
             alt=""
           />
         </div>
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, x: 700 }} // Adjust x to control the starting position
         animate={{ opacity: 1, x: 0 }} // Adjust x to control the ending position
